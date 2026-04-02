@@ -1,0 +1,639 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+    color: black;
+    ;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    z-index: 10;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-family: GramophoneNF;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-image {
+    height: 2.5rem;
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    transition: ease-in-out 0.4s;
+    color: rgb(225, 39, 39);
+}
+
+/* nav img:hover {
+    transition: ease-in-out 0.3s;
+    color: rgb(225, 39, 39);
+} */
+
+/* HOME PAGE IMAGE */
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.showcase img {
+    width: 100vw;
+    height: auto;
+}
+
+.showcase h1 {
+    color: black;
+    font-family: GramophoneNF;
+    font-size: 4rem;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.landing-image {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.description-block {
+    padding: 20px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    right: 0;
+    width: 30%;
+    height: 60%;
+    font-family: GramophoneNF, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(225, 39, 39);
+    font-size: 1.3rem;
+
+}
+
+
+
+h1,
+h2,
+h3 {
+    font-family: GramophoneNF;
+}
+
+/* ABOUT PAGE */
+
+.about-showcase img {
+    min-width: 100%;
+    min-height: 100%;
+    height: 130%;
+    object-fit: cover;
+    position: absolute;
+    margin-top: -100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+    /* border-bottom: 10px solid rgb(225, 39, 39); */
+}
+
+.about-showcase {
+    position: relative;
+    top: 100px;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.about-me-block {
+    /* border: 2px solid orange; */
+    font-size: 1.2rem;
+    /* margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    text-shadow: 1px 1px 0 #000, 2px 2px 2px #555;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    /* font-family: publico text; */
+    font-family: GaramondPremierPro, helvetica, sans-serif;
+}
+
+/* FINESSE*/
+
+.text-content {
+    padding: 20px;
+}
+
+.about-me-block h1 {
+    color: rgb(225, 39, 39);
+    /* color: orange; */
+}
+
+.about-me-para-one {
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.457);
+    border-radius: 20px;
+    margin: 5px;
+    color: white;
+}
+
+.about-me-para-two {
+    /* border: 2px solid blue; */
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.457);
+    border-radius: 20px;
+    color: white;
+}
+
+.about-me-para-three {
+    /* border: 2px solid blue; */
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.457);
+    border-radius: 20px;
+    color: white;
+}
+
+.about-me-para-four {
+    /* border: 2px solid blue; */
+    width: 40%;
+    padding: 10px;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    background-color: rgba(0, 0, 0, 0.457);
+    border-radius: 20px;
+    color: white;
+}
+
+/* ABOUT ME - JOB I HAD */
+.work-experience {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    /* margin: -170px auto 10px auto; */
+    margin-top: 10px;
+    background-color: rgb(176, 176, 176);
+    /* background-color: #EFEFEF; */
+    border-top: 10px solid rgb(255, 255, 255);
+
+}
+
+.work-experience h1 {
+    font-size: 3rem;
+    /* color: rgb(225, 39, 39); */
+    color: white;
+    text-shadow: 1px 1px 0 #000, 2px 2px 2px #555;
+    margin-bottom: 20px;
+}
+
+.work-experience h3 {
+    text-shadow: 1px 1px 0 #000, 2px 2px 2px #555;
+    font-size: 1.5rem;
+    color: orange;
+}
+
+.work-experience>* {
+    max-width: 1450px;
+}
+
+.work-experience p {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-family: GaramondPremierPro, helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.166);
+    border-radius: 20px;
+    color: white;
+
+}
+
+.work-experience img {
+    height: 40rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    /* Vertically centers the text with the image */
+    gap: 20px;
+    /* Adds space between image and text */
+    margin-top: 50px;
+    width: 70%;
+}
+
+.about-container a {
+    font-family: GramophoneNF, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.about-container a:hover {
+    transition: ease-in-out 0.4s;
+    color: white;
+}
+
+#job-description:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+
+/* .network-block {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    right: 0;
+    width: 40%;
+    height: 60%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.network-block img {
+    width: min-content;
+    max-width: 100%;
+    height: 30%;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+    padding: 5px;
+} */
+
+/* GALLERY PAGE */
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto 10px auto 10px;
+}
+
+.gallery-container img {
+    height: 30rem;
+}
+
+.gallery-container h3 {
+    padding: 10px;
+}
+
+.gallery-container>* {
+    width: 100%;
+    margin: 10px;
+}
+
+.work-image-container-1 {
+    padding: 200px;
+    border: 5px solid gray;
+    border-radius: 20px;
+    /* width: 50%; */
+    /* Makes the video take the full width of its container */
+    height: auto;
+    /* Automatically adjusts height to maintain aspect ratio */
+    max-width: 800px;
+    /* Optional: Prevents the video from getting too large on big screens */
+    display: block;
+    /* Optional: Removes extra white space that sometimes appears below the video */
+    margin: 0 auto;
+    /* Optional: Centers the video if a max-width is set */
+}
+
+.work-image-container-2 {
+    padding: 200px;
+    border: 5px solid gray;
+    border-radius: 20px;
+    /* width: 50%; */
+    /* Makes the video take the full width of its container */
+    height: auto;
+    /* Automatically adjusts height to maintain aspect ratio */
+    max-width: 800px;
+    /* Optional: Prevents the video from getting too large on big screens */
+    display: block;
+    /* Optional: Removes extra white space that sometimes appears below the video */
+    margin: 0 auto;
+    /* Optional: Centers the video if a max-width is set */
+}
+
+.work-image-container-9 {
+    margin-top: 50px;
+}
+
+.work-image-container-9>* {
+    margin-top: 20px;
+}
+
+/*DAILY PLANET VIDEOS*/
+
+.daily-planet-videos {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    /* Centers the video containers within the gallery */
+    gap: 20px;
+    /* Adds space between the video containers */
+    flex-wrap: wrap;
+    /* Allows containers to wrap to the next line on small screens */
+}
+
+.video-container {
+    /* Each container takes up roughly half the width, adjusting for the gap */
+    flex: 1 1 40%;
+    max-width: 100%;
+    /* Ensures a maximum width for consistency */
+    text-align: center;
+    /* Centers the title and video within its container */
+}
+
+.video-container h3 {
+    margin-bottom: 10px;
+    /* Adds space below the title */
+}
+
+.video-container video,
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+video {
+    width: 80%;
+    /* Makes the video take the full width of its container */
+    height: auto;
+    /* Automatically adjusts height to maintain aspect ratio */
+    max-width: 800px;
+    /* Optional: Prevents the video from getting too large on big screens */
+    display: block;
+    /* Optional: Removes extra white space that sometimes appears below the video */
+    margin: 0 auto;
+    /* Optional: Centers the video if a max-width is set */
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+video::-webkit-media-controls-play-button {
+    filter: sepia(1) hue-rotate(200deg);
+    /* Change color with filters */
+}
+
+video::-webkit-media-controls-timeline {
+    display: none;
+    /* Hide the progress bar */
+}
+
+/*FOOTER */
+/* .social-icons .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 5px;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.social-icons .fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+}
+
+.fa-instagram {
+    background: #125688;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+} */
+
+/* Footer Styling */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    /* background-color: rgba(0, 0, 0, 0.0); */
+    /* Transparent black */
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transition: ease-in-out 0.4s;
+    color: black;
+
+    /* Example hover color */
+}
+
+
+/* MEDIA QUERIES*/
+
+/* TABLET */
+
+@media screen and (min-width: 515px) {
+
+    .work-experience h1 {
+        margin-top: 100px;
+    }
+}
+
+
+/* IPHONE */
+@media screen and (max-width: 1210px) {
+
+    /* CSS rules apply when the viewport width is 600px or less on a screen device */
+    .showcase h1 {
+        color: white;
+        /* text-shadow: 2px 2px 4px black; */
+        text-shadow: 1px 1px 0 #000, 2px 2px 2px #555;
+    }
+
+    .description-block {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        /* background: rgba(0, 0, 0, 0.1); */
+        /* text-shadow: 2px 2px 20px black; */
+        text-shadow: 1px 1px 0 #000, 2px 2px 2px #555;
+        height: 20%;
+        border-radius: 20px;
+        text-align: center;
+        /* background-color: rgba(255, 255, 255, 0.3); */
+
+    }
+
+    #job-description:nth-of-type(even) {
+        flex-direction: column;
+    }
+
+    .about-me-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .about-showcase img {
+        min-width: 100%;
+        min-height: 100%;
+        /* height: 10%; */
+        object-fit: cover;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -10;
+    }
+
+    .about-me-block>* {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .about-me-para-one {
+        width: 100%;
+        padding: 10px;
+        /* background-color: rgba(255, 255, 255, 0.3); */
+        background-color: rgba(0, 0, 0, 0.457);
+        border-radius: 20px;
+        margin: 5px;
+        font-size: 1rem;
+    }
+
+    .about-me-para-two {
+        /* border: 2px solid blue; */
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.457);
+        border-radius: 20px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .about-me-para-three {
+        /* border: 2px solid blue; */
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.457);
+        border-radius: 20px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .about-me-para-four {
+        /* border: 2px solid blue; */
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.457);
+        border-radius: 20px;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .work-experience h1 {
+        margin-top: 110px;
+    }
+
+    .work-experience img {
+        height: 25rem;
+    }
+
+    .work-experience>* {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    .big-image {
+        height: 5rem;
+    }
+
+    .daily-planet-videos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .video-container video {
+        width: 100%;
+    }
+}
