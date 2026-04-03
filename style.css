@@ -486,8 +486,7 @@ video::-webkit-media-controls-timeline {
 /* MEDIA QUERIES*/
 
 /*HEIGHT FIX - HOMEPAGE */
-
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 1100px) {
     .description-block {
         padding: 20px;
         position: relative;
