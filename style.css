@@ -338,7 +338,7 @@ h3 {
     text-align: center;
     margin: auto 10px auto 10px;
     max-width: 100%;
-    
+
 }
 
 .gallery-container img {
@@ -370,7 +370,8 @@ h3 {
     /* Optional: Centers the video if a max-width is set */
 }
 
-.work-image-container-1 h1, .work-image-container-2 h1 {
+.work-image-container-1 h1,
+.work-image-container-2 h1 {
     display: flex;
     justify-content: center;
 }
@@ -459,47 +460,12 @@ video::-webkit-media-controls-timeline {
 }
 
 /*FOOTER */
-/* .social-icons .fa {
-    padding: 15px;
-    font-size: 20px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    margin: 0 5px;
-    color: white;
-    transition: opacity 0.3s;
-}
 
-.social-icons .fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-    background: #3B5998;
-}
-
-.fa-twitter {
-    background: #55ACEE;
-}
-
-.fa-instagram {
-    background: #125688;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-} */
-
-/* Footer Styling */
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
-    /* background-color: rgba(0, 0, 0, 0.0); */
-    /* Transparent black */
 }
 
 .social-links a {
@@ -653,7 +619,8 @@ video::-webkit-media-controls-timeline {
         margin: auto;
     }
 
-    .work-image-container-1, .work-image-container-2 {
+    .work-image-container-1,
+    .work-image-container-2 {
         max-width: 100%;
     }
 
