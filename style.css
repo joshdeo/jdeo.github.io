@@ -121,17 +121,12 @@ h3 {
 
 .about-showcase img {
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: -1;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: -1;
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -225,10 +220,10 @@ h3 {
     align-items: center;
     /* margin: -170px auto 10px auto; */
     margin-top: 10px;
-    background-color: rgb(176, 176, 176);
+    background-color: rgb(0, 83, 185);
     /* background-color: #EFEFEF; */
-    border-top: 10px solid rgb(255, 255, 255);
-
+    /* border-top: 10px solid rgb(255, 255, 255); */
+    border: 10px solid white;
 }
 
 .work-experience h1 {
@@ -281,7 +276,7 @@ h3 {
     font-family: GramophoneNF, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
     font-size: 0.8rem;
-    color: black;
+    color: orange;
 }
 
 .about-container a:hover {
@@ -579,7 +574,7 @@ video::-webkit-media-controls-timeline {
         width: 100%;
         padding: 10px;
         /* background-color: rgba(255, 255, 255, 0.3); */
-        background-color: rgba(0, 0, 0, 0.457);
+        background-color: rgba(0, 0, 0, 0.800);
         border-radius: 20px;
         margin: 5px;
         font-size: 1rem;
@@ -589,7 +584,7 @@ video::-webkit-media-controls-timeline {
         /* border: 2px solid blue; */
         width: 100%;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.457);
+        background-color: rgba(0, 0, 0, 0.800);
         border-radius: 20px;
         font-size: 1rem;
         margin-top: 20px;
@@ -599,7 +594,7 @@ video::-webkit-media-controls-timeline {
         /* border: 2px solid blue; */
         width: 100%;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.457);
+        background-color: rgba(0, 0, 0, 0.800);
         border-radius: 20px;
         font-size: 1rem;
         margin-top: 20px;
@@ -609,7 +604,7 @@ video::-webkit-media-controls-timeline {
         /* border: 2px solid blue; */
         width: 100%;
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.457);
+        background-color: rgba(0, 0, 0, 0.800);
         border-radius: 20px;
         font-size: 1rem;
         margin-top: 20px;
