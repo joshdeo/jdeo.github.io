@@ -377,6 +377,22 @@ h3 {
     /* Centers the title and video within its container */
 }
 
+.work-image-container-2 {
+    padding: 200px;
+    border: 5px solid gray;
+    border-radius: 20px;
+    /* width: 50%; */
+    /* Makes the video take the full width of its container */
+    height: auto;
+    /* Automatically adjusts height to maintain aspect ratio */
+    max-width: 45%;
+    /* Optional: Prevents the video from getting too large on big screens */
+    display: block;
+    /* Optional: Removes extra white space that sometimes appears below the video */
+    margin: 0 auto;
+    /* Optional: Centers the video if a max-width is set */
+}
+
 .video-container h3 {
     margin-bottom: 10px;
     /* Adds space below the title */
