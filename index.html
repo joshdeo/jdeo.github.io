@@ -1,47 +1,631 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Joshua Deosaran</title>
-    <link rel="icon" type="image/x-icon" href="resources/images/favicon.svg">
-    <link href="https://fonts.cdnfonts.com/css/gramophone-nf" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home 🏠- Joshua Deosaran</title>
+  <meta name="description" content="Joshua Deosaran — Creative Director, Producer and Storyteller. Born in New York. Built in Toronto."/>
+  <link rel="icon" href="resources/images/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html"><img class="navbar-links" id="navbar-resize" alt="">HOME</a></li>
-            <li><a href="about.html"><img class="navbar-links" id="navbar-resize" alt="">ABOUT</a></li>
-            <li><a href="gallery.html"><img class="navbar-links" id="navbar-resize" alt="">GALLERY</a></li>
-            <img class="logo-image" src="./resources/images/favicon.svg" alt="">
-        </ul>
-    </nav>
+<!-- NAV -->
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html">Joshua Deosaran</a>
+<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Work</a></li>
+  </ul>
 
-    <div class="showcase">
-        <h1>JOSHUA DEOSARAN</h1>
-        <div class="image-container">
-            <img class="landing-image" src="./resources/landing.jpg" autoplay loop muted playsinline></img>
-        </div>
-        <div class="description-block">
-            <p>Creative Director, Producer & Storyteller.</p>
-        </div>
-    </div>
-</body>
+<div class="nav-overlay" id="navOverlay"></div>
 
-<!-- Footer on top of image -->
-<footer class="footer">
-    <div class="social-links">
-        <a target="_blank" href="https://www.facebook.com/joshua.deosaran" class="fa fa-facebook"></a>
-        <a target="_blank" href="https://www.instagram.com/nycjosh/" class="fa fa-instagram"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/jdeo/" class="fa fa-linkedin"></a>
+<!-- HERO -->
+<section class="hero" id="hero">
+
+  <!-- STARS (drawn by JS) -->
+  <canvas id="starsCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;will-change:transform;transition:opacity 2s ease;"></canvas>
+
+  <!-- MOON (night) -->
+  <div class="moon" id="moon"></div>
+
+  <!-- SUN (day) -->
+  <div class="sun" id="sun"></div>
+
+  <!-- BIRDS (day) -->
+  <svg class="birds" id="birds" width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" style="animation:driftCloud 60s linear infinite">
+    <path d="M10 20 Q15 14 20 20" stroke="rgba(10,15,30,0.45)" stroke-width="1.5" fill="none"/>
+    <path d="M30 12 Q36 6 42 12" stroke="rgba(10,15,30,0.4)" stroke-width="1.5" fill="none"/>
+    <path d="M55 22 Q60 16 65 22" stroke="rgba(10,15,30,0.35)" stroke-width="1.5" fill="none"/>
+    <path d="M78 8 Q83 2 88 8" stroke="rgba(10,15,30,0.3)" stroke-width="1.5" fill="none"/>
+    <path d="M100 18 Q104 13 108 18" stroke="rgba(10,15,30,0.25)" stroke-width="1.5" fill="none"/>
+  </svg>
+
+  <!-- CLOUDS (day) -->
+  <div class="cloud cloud-1">
+    <svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="80" cy="40" rx="70" ry="20" fill="rgba(255,255,255,0.82)"/>
+      <ellipse cx="55" cy="32" rx="38" ry="22" fill="rgba(255,255,255,0.88)"/>
+      <ellipse cx="95" cy="28" rx="32" ry="20" fill="rgba(255,255,255,0.85)"/>
+      <ellipse cx="115" cy="36" rx="28" ry="16" fill="rgba(255,255,255,0.8)"/>
+    </svg>
+  </div>
+  <div class="cloud cloud-2">
+    <svg width="120" height="50" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="60" cy="35" rx="52" ry="16" fill="rgba(255,255,255,0.75)"/>
+      <ellipse cx="42" cy="27" rx="28" ry="18" fill="rgba(255,255,255,0.8)"/>
+      <ellipse cx="75" cy="24" rx="24" ry="16" fill="rgba(255,255,255,0.78)"/>
+    </svg>
+  </div>
+  <div class="cloud cloud-3">
+    <svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="50" cy="28" rx="44" ry="14" fill="rgba(255,255,255,0.7)"/>
+      <ellipse cx="35" cy="22" rx="22" ry="16" fill="rgba(255,255,255,0.75)"/>
+      <ellipse cx="65" cy="20" rx="20" ry="14" fill="rgba(255,255,255,0.72)"/>
+    </svg>
+  </div>
+
+  <!-- HORIZON GLOW -->
+  <div class="horizon-glow"></div>
+
+  <!-- SKYLINE: FAR -->
+  <div class="skyline-layer" id="skylineFar" style="z-index:2;">
+    <svg viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style="width:100%;display:block;">
+      <g fill="#0f1e30" opacity="0.8">
+        <rect x="0" y="120" width="30" height="100"/><rect x="35" y="90" width="25" height="130"/>
+        <rect x="65" y="100" width="20" height="120"/><rect x="90" y="70" width="35" height="150"/>
+        <rect x="130" y="110" width="18" height="110"/><rect x="155" y="85" width="28" height="135"/>
+        <rect x="188" y="95" width="22" height="125"/>
+        <rect x="215" y="60" width="40" height="160"/>
+        <!-- empire state -->
+        <rect x="310" y="28" width="30" height="192"/><rect x="317" y="8" width="16" height="22"/><rect x="322" y="0" width="6" height="10"/>
+        <rect x="355" y="75" width="25" height="145"/><rect x="385" y="60" width="35" height="160"/>
+        <rect x="425" y="90" width="20" height="130"/><rect x="450" y="70" width="30" height="150"/>
+        <rect x="485" y="100" width="25" height="120"/><rect x="515" y="55" width="40" height="165"/>
+        <rect x="560" y="85" width="22" height="135"/><rect x="587" y="75" width="28" height="145"/>
+        <rect x="620" y="110" width="20" height="110"/><rect x="645" y="65" width="38" height="155"/>
+        <rect x="688" y="90" width="25" height="130"/>
+        <!-- One WTC -->
+        <rect x="718" y="18" width="34" height="202"/><rect x="723" y="8" width="24" height="12"/><rect x="728" y="0" width="14" height="10"/>
+        <rect x="757" y="80" width="28" height="140"/><rect x="790" y="70" width="32" height="150"/>
+        <rect x="827" y="100" width="20" height="120"/><rect x="852" y="55" width="45" height="165"/>
+        <rect x="902" y="90" width="25" height="130"/><rect x="932" y="75" width="30" height="145"/>
+        <rect x="967" y="100" width="18" height="120"/><rect x="990" y="60" width="40" height="160"/>
+        <rect x="1035" y="80" width="25" height="140"/>
+        <!-- Chrysler -->
+        <rect x="1065" y="42" width="44" height="178"/><rect x="1072" y="18" width="30" height="26"/>
+        <path d="M1078 8 L1080 18 L1092 18 L1094 8Z" fill="#0f1e30" opacity="0.8"/>
+        <path d="M1080 2 L1082 8 L1090 8 L1092 2Z" fill="#0f1e30" opacity="0.8"/>
+        <rect x="1114" y="85" width="22" height="135"/><rect x="1141" y="70" width="32" height="150"/>
+        <rect x="1178" y="100" width="20" height="120"/><rect x="1203" y="55" width="38" height="165"/>
+        <rect x="1246" y="80" width="28" height="140"/><rect x="1279" y="95" width="25" height="125"/>
+        <rect x="1309" y="65" width="35" height="155"/><rect x="1349" y="90" width="20" height="130"/>
+        <rect x="1374" y="75" width="30" height="145"/><rect x="1409" y="100" width="31" height="120"/>
+      </g>
+      <g fill="rgba(232,160,48,0.22)">
+        <rect x="218" y="74" width="2" height="2"/><rect x="224" y="81" width="2" height="2"/>
+        <rect x="316" y="42" width="2" height="2"/><rect x="322" y="52" width="2" height="2"/>
+        <rect x="316" y="62" width="2" height="2"/><rect x="390" y="76" width="2" height="2"/>
+        <rect x="520" y="70" width="2" height="2"/><rect x="527" y="78" width="2" height="2"/>
+        <rect x="723" y="30" width="2" height="2"/><rect x="729" y="42" width="2" height="2"/>
+        <rect x="723" y="54" width="2" height="2"/><rect x="729" y="66" width="2" height="2"/>
+        <rect x="857" y="70" width="2" height="2"/><rect x="863" y="78" width="2" height="2"/>
+        <rect x="1070" y="56" width="2" height="2"/><rect x="1076" y="66" width="2" height="2"/>
+        <rect x="1208" y="70" width="2" height="2"/><rect x="1214" y="78" width="2" height="2"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- SKYLINE: MID -->
+  <div class="skyline-layer" id="skylineMid" style="z-index:3;">
+    <svg viewBox="0 0 1440 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style="width:100%;display:block;">
+      <g fill="#0d1929">
+        <rect x="0" y="160" width="45" height="120"/><rect x="50" y="130" width="38" height="150"/>
+        <rect x="93" y="110" width="50" height="170"/>
+        <rect x="148" y="78" width="44" height="202"/><rect x="155" y="52" width="30" height="28"/>
+        <path d="M161 28 L163 52 L175 52 L177 28Z" fill="#0d1929"/>
+        <path d="M163 18 L165 28 L175 28 L177 18Z" fill="#0d1929"/>
+        <path d="M166 8 L168 18 L172 18 L174 8Z" fill="#0d1929"/>
+        <rect x="197" y="120" width="30" height="160"/><rect x="232" y="95" width="55" height="185"/>
+        <rect x="292" y="140" width="28" height="140"/><rect x="325" y="100" width="48" height="180"/>
+        <rect x="378" y="130" width="35" height="150"/><rect x="418" y="75" width="60" height="205"/>
+        <rect x="483" y="110" width="40" height="170"/><rect x="528" y="90" width="52" height="190"/>
+        <rect x="585" y="125" width="35" height="155"/>
+        <rect x="625" y="70" width="65" height="210"/>
+        <rect x="695" y="18" width="35" height="262"/><rect x="700" y="8" width="25" height="12"/><rect x="705" y="0" width="15" height="10"/>
+        <rect x="735" y="100" width="40" height="180"/><rect x="780" y="80" width="55" height="200"/>
+        <rect x="840" y="120" width="38" height="160"/><rect x="883" y="95" width="50" height="185"/>
+        <rect x="938" y="140" width="30" height="140"/><rect x="973" y="75" width="58" height="205"/>
+        <rect x="1036" y="105" width="42" height="175"/><rect x="1083" y="85" width="55" height="195"/>
+        <rect x="1143" y="130" width="33" height="150"/><rect x="1181" y="65" width="62" height="215"/>
+        <rect x="1248" y="110" width="40" height="170"/><rect x="1293" y="90" width="50" height="190"/>
+        <rect x="1348" y="125" width="35" height="155"/><rect x="1388" y="80" width="55" height="200"/>
+      </g>
+      <g fill="rgba(232,160,48,0.42)">
+        <rect x="100" y="124" width="3" height="3"/><rect x="108" y="132" width="3" height="3"/>
+        <rect x="100" y="144" width="3" height="3"/><rect x="108" y="152" width="3" height="3"/>
+        <rect x="160" y="94" width="3" height="3"/><rect x="168" y="102" width="3" height="3"/>
+        <rect x="160" y="114" width="3" height="3"/><rect x="168" y="122" width="3" height="3"/>
+        <rect x="240" y="110" width="3" height="3"/><rect x="248" y="118" width="3" height="3"/>
+        <rect x="240" y="130" width="3" height="3"/><rect x="248" y="138" width="3" height="3"/>
+        <rect x="425" y="90" width="3" height="3"/><rect x="433" y="97" width="3" height="3"/>
+        <rect x="425" y="110" width="3" height="3"/><rect x="433" y="117" width="3" height="3"/>
+        <rect x="700" y="32" width="3" height="3"/><rect x="708" y="42" width="3" height="3"/>
+        <rect x="700" y="52" width="3" height="3"/><rect x="708" y="62" width="3" height="3"/>
+        <rect x="700" y="72" width="3" height="3"/><rect x="708" y="82" width="3" height="3"/>
+        <rect x="785" y="95" width="3" height="3"/><rect x="793" y="102" width="3" height="3"/>
+        <rect x="978" y="90" width="3" height="3"/><rect x="986" y="97" width="3" height="3"/>
+        <rect x="1186" y="80" width="3" height="3"/><rect x="1194" y="88" width="3" height="3"/>
+        <rect x="1186" y="100" width="3" height="3"/><rect x="1194" y="108" width="3" height="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- SKYLINE: CLOSE -->
+  <div class="skyline-layer" id="skylineClose" style="z-index:4;">
+    <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style="width:100%;display:block;">
+      <g fill="#06090f">
+        <rect x="0" y="60" width="60" height="140"/><rect x="65" y="40" width="45" height="160"/>
+        <rect x="115" y="20" width="70" height="180"/>
+        <path d="M0 130 Q50 88 100 130 L100 200 L0 200Z" fill="#06090f"/>
+        <rect x="185" y="50" width="55" height="150"/><rect x="245" y="30" width="80" height="170"/>
+        <rect x="330" y="60" width="50" height="140"/><rect x="385" y="35" width="65" height="165"/>
+        <rect x="455" y="55" width="55" height="145"/><rect x="515" y="22" width="85" height="178"/>
+        <rect x="605" y="45" width="60" height="155"/>
+        <rect x="670" y="12" width="95" height="188"/>
+        <rect x="770" y="50" width="60" height="150"/><rect x="835" y="30" width="78" height="170"/>
+        <rect x="918" y="55" width="55" height="145"/><rect x="978" y="18" width="88" height="182"/>
+        <rect x="1071" y="45" width="65" height="155"/><rect x="1141" y="35" width="75" height="165"/>
+        <rect x="1221" y="60" width="52" height="140"/><rect x="1278" y="22" width="85" height="178"/>
+        <rect x="1368" y="50" width="72" height="150"/>
+        <rect x="0" y="155" width="1440" height="45"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- HERO TEXT -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">Creative Director &nbsp;&bull;&nbsp; Producer &nbsp;&bull;&nbsp; Storyteller</div>
+    <h1 class="hero-title">
+      <span class="outline-text">Joshua</span><br>
+      <em>Deosaran</em>
+    </h1>
+    <p class="hero-sub">Award-winning producer and documentary director based in Toronto. Nearly a decade of telling stories that matter, on land, at sea, and in the air.</p>
+    <div class="hero-ctas">
+      <a class="btn-glow" href="gallery.html">View my work &rarr;</a>
+      <a class="btn-outline-light" href="about.html">About me</a>
     </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="marquee-star">★</span>Story Producer</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Creative Director</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Documentary Filmmaker</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Field Producer</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Director</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Apple TV+</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Prime Video</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>The Weather Channel</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>New York City</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Story Producer</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Creative Director</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Documentaries</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Field Producer</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Director</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Apple TV+</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Prime Video</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>The Weather Channel</div>
+    <div class="marquee-item"><span class="marquee-star">★</span>Toronto, Canada</div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-intro reveal">
+    <div class="section-label">By the numbers</div>
+    <h2>A decade of <em>real stories</em></h2>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-cell reveal reveal-d1">
+      <div class="stat-number"><span class="counter" data-target="6">0</span><span class="suffix">+</span></div>
+      <div class="stat-label">Years in television</div>
+    </div>
+    <div class="stat-cell reveal reveal-d2">
+      <div class="stat-number"><span class="counter" data-target="6">0</span><span class="suffix">+</span></div>
+      <div class="stat-label">Series produced</div>
+    </div>
+    <div class="stat-cell reveal reveal-d3">
+      <div class="stat-number"><span class="counter" data-target="1">0</span><span class="suffix"></span></div>
+      <div class="stat-label">Feature documentary</div>
+    </div>
+    <div class="stat-cell reveal reveal-d4">
+      <div class="stat-number"><span class="counter" data-target="10">0</span><span class="suffix">+</span></div>
+      <div class="stat-label">Networks &amp; platforms</div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work-section">
+  <p class="section-label-dark reveal">Most recent projects</p>
+  <h2 class="reveal">Fresh off the <em>field.</em></h2>
+  <div class="work-grid">
+    <a class="work-card span-7 reveal" href="gallery.html#west-harbour-heroes">
+      <div class="work-thumb"><img src="resources/images/field_resources/corm-comox.jpeg" alt="West Harbour Heroes"/></div>
+      <div class="work-meta">
+        <div class="work-tags"><span class="tag">2025–Present</span><span class="tag">Story Producer</span><span class="tag">CRAVE</span><span class="tag">USA TODAY</span></div>
+        <div class="work-title">West Harbour Heroes, Season 1</div>
+        <div class="work-desc">Vancouver Island. 442 Search &amp; Rescue. Helicopters, Twin Otter parachutes, and the new Airbus Kingfisher 295.</div>
+        <div class="work-cta">Watch trailer &rarr;</div>
+      </div>
+    </a>
+    <a class="work-card span-5 reveal reveal-d1" href="gallery.html#oyster-island">
+      <div class="work-thumb"><img src="resources/images/field_resources/Carl-cafe-master.jpeg" alt="Oyster Island"/></div>
+      <div class="work-meta">
+        <div class="work-tags"><span class="tag">Director</span><span class="tag">Producer</span><span class="tag">Feature Doc</span></div>
+        <div class="work-title">Oyster Island, Feature Documentary</div>
+        <div class="work-desc">First feature and Director credit. 18 months in PEI. Festival premiere 2026.</div>
+        <div class="work-cta">Learn more &rarr;</div>
+      </div>
+    </a>
+    <a class="work-card span-6 reveal reveal-d2" href="gallery.html#east-harbour-s3">
+      <div class="work-thumb"><img src="resources/images/field_resources/EHH3-corm-selfie.png" alt="East Harbour Heroes S3"/></div>
+      <div class="work-meta">
+        <div class="work-tags"><span class="tag">Story Producer</span><span class="tag">Apple TV+</span><span class="tag">CRAVE</span></div>
+        <div class="work-title">East Harbour Heroes, Season 3</div>
+        <div class="work-desc">Newfoundland &amp; Labrador. Coral garden discovery and WWII relic recovery from Gander Lake.</div>
+        <div class="work-cta">Watch trailer &rarr;</div>
+      </div>
+    </a>
+    <a class="work-card span-6 reveal reveal-d3" href="gallery.html#claw-hunters">
+      <div class="work-thumb"><img src="resources/images/field_resources/lex-lobster-boat.jpeg" alt="Claw Hunters"/></div>
+      <div class="work-meta">
+        <div class="work-tags"><span class="tag">Story Producer</span><span class="tag">Weather Channel</span><span class="tag">APPLE TV+</span><span class="tag">BLAZE TV UK</span></div>
+        <div class="work-title">Claw Hunters, Season 1</div>
+        <div class="work-desc">Nova Scotia to Maine. Days at sea in tough, unpredictable conditions. Aired 2025.</div>
+        <div class="work-cta">Watch trailer &rarr;</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT PARALLAX -->
+<section class="about-parallax" id="about-strip">
+  <div class="about-city-bg" id="aboutCityBg">
+    <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style="width:100%;display:block;">
+      <g fill="#1a2e4a">
+        <rect x="0" y="100" width="42" height="220"/><rect x="48" y="60" width="58" height="260"/>
+        <rect x="112" y="80" width="50" height="240"/><rect x="168" y="38" width="72" height="282"/>
+        <rect x="246" y="90" width="48" height="230"/><rect x="300" y="55" width="64" height="265"/>
+        <rect x="370" y="75" width="54" height="245"/><rect x="430" y="28" width="82" height="292"/>
+        <rect x="518" y="85" width="50" height="235"/><rect x="574" y="48" width="68" height="272"/>
+        <rect x="648" y="68" width="57" height="252"/><rect x="711" y="22" width="88" height="298"/>
+        <rect x="805" y="80" width="52" height="240"/><rect x="863" y="42" width="70" height="278"/>
+        <rect x="939" y="65" width="60" height="255"/><rect x="1005" y="32" width="80" height="288"/>
+        <rect x="1091" y="88" width="48" height="232"/><rect x="1145" y="52" width="64" height="268"/>
+        <rect x="1215" y="70" width="57" height="250"/><rect x="1278" y="28" width="84" height="292"/>
+        <rect x="1368" y="82" width="52" height="238"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-left">
+      <p class="about-section-label reveal">A bit about me</p>
+      <h2 class="reveal">Born in New York.<br>Built in <em>Toronto.</em></h2>
+      <p class="about-body reveal">I'm a television producer and documentary director with nearly a decade of experience across broadcast, streaming, and independent film. My credits include series for Apple TV+, Prime Video, and The Weather Channel, and my debut feature documentary is headed to festivals in 2026.</p>
+      <p class="about-body reveal">Whether I'm embedded with Search and Rescue crews on Vancouver Island or documenting a dying oyster industry in PEI, I go wherever the story demands, and I stay until I get it right.</p>
+      <div class="reveal" style="margin-top:2rem;">
+        <a class="btn-glow" href="about.html">Full story &rarr;</a>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="cities-timeline">
+        <div class="city-item">
+          <div class="city-num">I</div>
+          <div>
+            <div class="city-name">New York City</div>
+            <div class="city-text">Where it started. Staten Island born, Queens raised, shaped by the energy, the culture, and a relentless curiosity that's never fully switched off.</div>
+          </div>
+        </div>
+        <div class="city-item">
+          <div class="city-num">II</div>
+          <div>
+            <div class="city-name">Fort Lauderdale</div>
+            <div class="city-text">A childhood chapter that widened the lens. South Florida taught me to stay present and find joy in unlikely places, a lesson that's quietly shaped how I approach every project.</div>
+          </div>
+        </div>
+        <div class="city-item">
+          <div class="city-num">III</div>
+          <div>
+            <div class="city-name">Toronto</div>
+            <div class="city-text">Where I became a professional, built lasting friendships, and learned that the richest stories come from the intersections of cultures, something Toronto has in abundance.</div>
+          </div>
+        </div>
+        <div class="city-item">
+          <div class="city-num">IV</div>
+          <div>
+            <div class="city-name">What's Next</div>
+            <div class="city-text">A debut feature documentary premiering in 2026, continued series work, and a growing slate of projects that push further into character-driven storytelling across film and television.</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-wrap">
+        <p class="skills-label">Specialties</p>
+        <div class="skills-pills">
+          <span class="skill-pill">Story Producing</span>
+          <span class="skill-pill">Documentary Direction</span>
+          <span class="skill-pill">Field Producing</span>
+          <span class="skill-pill">Development</span>
+          <span class="skill-pill">Casting</span>
+          <span class="skill-pill">Broadcast TV</span>
+          <span class="skill-pill">Apple TV+</span>
+          <span class="skill-pill">Prime Video</span>
+          <span class="skill-pill">The Weather Channel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-skyline-bg">
+    <svg viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style="width:100%;display:block;">
+      <g fill="rgba(200,80,42,0.7)">
+        <rect x="0" y="120" width="35" height="80"/><rect x="40" y="90" width="28" height="110"/>
+        <rect x="73" y="70" width="45" height="130"/><rect x="123" y="50" width="55" height="150"/>
+        <rect x="182" y="80" width="38" height="120"/><rect x="225" y="60" width="50" height="140"/>
+        <rect x="280" y="40" width="65" height="160"/><rect x="350" y="70" width="42" height="130"/>
+        <rect x="397" y="8" width="30" height="192"/><rect x="432" y="8" width="30" height="192"/>
+        <rect x="467" y="75" width="45" height="125"/><rect x="517" y="55" width="55" height="145"/>
+        <rect x="577" y="85" width="38" height="115"/><rect x="620" y="45" width="62" height="155"/>
+        <rect x="687" y="70" width="45" height="130"/>
+        <rect x="737" y="18" width="38" height="182"/><rect x="744" y="4" width="24" height="16"/><rect x="749" y="0" width="14" height="6"/>
+        <rect x="780" y="65" width="50" height="135"/><rect x="835" y="85" width="38" height="115"/>
+        <rect x="878" y="50" width="58" height="150"/><rect x="941" y="75" width="45" height="125"/>
+        <rect x="991" y="40" width="65" height="160"/><rect x="1061" y="70" width="42" height="130"/>
+        <rect x="1108" y="55" width="55" height="145"/><rect x="1168" y="80" width="38" height="120"/>
+        <rect x="1211" y="45" width="62" height="155"/><rect x="1278" y="65" width="48" height="135"/>
+        <rect x="1331" y="85" width="38" height="115"/><rect x="1374" y="55" width="55" height="145"/>
+        <rect x="1434" y="75" width="40" height="125"/>
+      </g>
+    </svg>
+  </div>
+
+  <p class="contact-label reveal">
+    <span></span>Get in touch<span></span>
+  </p>
+  <h2 class="reveal">Let's tell a story<br>worth <em>remembering.</em></h2>
+  <p class="contact-sub reveal">Whether you have a project in mind or just want to connect, I'd love to hear from you.</p>
+  <div class="contact-links reveal">
+    <a class="btn-glow" href="mailto:joshua.deosaran@gmail.com">E: joshua.deosaran@gmail.com</a>
+    <a class="btn-glow" href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn-glow" href="https://www.instagram.com/nycjosh/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Joshua Deosaran</span>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="gallery.html">Work</a>
+    <a href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
 </footer>
 
-<script src="scrpt.js"></script>
+<script>
+(function(){
 
+  // ── DAY / NIGHT THEME ──
+  // 6:00–19:59 = day, 20:00–5:59 = night
+  // Bands: dawn 5-7, morning 7-11, midday 11-15, afternoon 15-18, dusk 18-20, night 20-5
+  function getTimeInfo(){
+    const h = new Date().getHours();
+    const m = new Date().getMinutes();
+    const frac = h + m/60;
+    if(frac >= 5 && frac < 7)   return {mode:'day', label:'Dawn',      skyTop:'#f7913a', skyBot:'#ffd080', horizon:'rgba(255,120,40,0.35)', horizMid:'rgba(255,200,80,0.2)'};
+    if(frac >= 7 && frac < 11)  return {mode:'day', label:'Morning',   skyTop:'#4a9fd4', skyBot:'#87ceeb', horizon:'rgba(255,200,100,0.2)', horizMid:'rgba(255,230,150,0.1)'};
+    if(frac >= 11 && frac < 15) return {mode:'day', label:'Midday',    skyTop:'#1e8fc8', skyBot:'#6bbde8', horizon:'rgba(255,210,120,0.18)', horizMid:'rgba(255,240,180,0.08)'};
+    if(frac >= 15 && frac < 18) return {mode:'day', label:'Afternoon', skyTop:'#2e8fb0', skyBot:'#78c8e8', horizon:'rgba(255,180,80,0.22)', horizMid:'rgba(255,220,130,0.12)'};
+    if(frac >= 18 && frac < 20) return {mode:'day', label:'Dusk',      skyTop:'#c85030', skyBot:'#e87840', horizon:'rgba(200,60,20,0.4)',   horizMid:'rgba(240,160,60,0.25)'};
+    return                             {mode:'night', label:'Night',   skyTop:'#0a0f1e', skyBot:'#1a2e4a', horizon:'rgba(200,80,42,0.22)', horizMid:'rgba(232,160,48,0.07)'};
+  }
+
+  const info = getTimeInfo();
+  const hero = document.querySelector('.hero');
+  const horizonEl = document.querySelector('.horizon-glow');
+
+  // Apply sky gradient
+  if(hero) hero.style.background = 'linear-gradient(to bottom,' + info.skyTop + ' 0%,' + info.skyBot + ' 100%)';
+  if(horizonEl) horizonEl.style.background = 'linear-gradient(to top,' + info.horizon + ' 0%,' + info.horizMid + ' 35%,transparent 100%)';
+
+  if(info.mode === 'day'){
+    document.body.classList.add('daytime');
+    // Make skyline buildings darker/visible against bright sky
+    document.querySelectorAll('#skylineFar g[fill]').forEach(g => g.setAttribute('fill','#2a3a50'));
+    document.querySelectorAll('#skylineMid g[fill]').forEach(g => g.setAttribute('fill','#1e2d40'));
+    document.querySelectorAll('#skylineClose g[fill]').forEach(g => g.setAttribute('fill','#0e1520'));
+    // Hide window lights during day
+    document.querySelectorAll('.skyline-layer svg rect[fill*="232,160"]').forEach(r => r.setAttribute('fill','rgba(0,0,0,0)'));
+  }
+
+  // ── STARS CANVAS ──
+  const starsCanvas = document.getElementById('starsCanvas');
+  if(starsCanvas && info.mode === 'night'){
+    const sc = starsCanvas.getContext('2d');
+    const stars = [];
+    function makeStars(){
+      starsCanvas.width = starsCanvas.offsetWidth || window.innerWidth;
+      starsCanvas.height = starsCanvas.offsetHeight || window.innerHeight;
+      stars.length = 0;
+      for(let i=0;i<190;i++){
+        stars.push({
+          x: Math.random()*starsCanvas.width,
+          y: Math.random()*starsCanvas.height*0.65,
+          r: Math.random()*1.5+0.3,
+          a: Math.random()*0.8+0.2,
+          speed: Math.random()*0.4+0.1
+        });
+      }
+    }
+    makeStars();
+    window.addEventListener('resize', makeStars);
+    let starT = 0;
+    function drawStars(){
+      starT += 0.008;
+      sc.clearRect(0,0,starsCanvas.width,starsCanvas.height);
+      stars.forEach(s => {
+        const twinkle = s.a * (0.6 + 0.4*Math.sin(starT*s.speed*10 + s.x));
+        sc.beginPath();
+        sc.arc(s.x, s.y, s.r, 0, Math.PI*2);
+        sc.fillStyle = 'rgba(255,255,240,'+twinkle+')';
+        sc.fill();
+      });
+      requestAnimationFrame(drawStars);
+    }
+    drawStars();
+  }
+
+  // ── NAV scroll + mobile toggle ──
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 60;
+    nav.classList.toggle('scrolled', scrolled);
+    document.body.classList.toggle('nav-scrolled', scrolled);
+  }, {passive:true});
+
+  const toggle   = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  const overlay  = document.getElementById('navOverlay');
+
+  function openNav() {
+    toggle.classList.add('open');
+    navLinks.classList.add('open');
+    if(overlay) { overlay.classList.add('open'); }
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    toggle.classList.remove('open');
+    navLinks.classList.remove('open');
+    if(overlay) { overlay.classList.remove('open'); }
+    document.body.style.overflow = '';
+  }
+
+  if(toggle && navLinks){
+    toggle.addEventListener('click', () => {
+      navLinks.classList.contains('open') ? closeNav() : openNav();
+    });
+    if(overlay) overlay.addEventListener('click', closeNav);
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
+  }
+
+  // ── PARALLAX ──
+  const moon = document.getElementById('moon');
+  const sun  = document.getElementById('sun');
+  const far   = document.getElementById('skylineFar');
+  const mid   = document.getElementById('skylineMid');
+  const close = document.getElementById('skylineClose');
+  const aboutBg = document.getElementById('aboutCityBg');
+  const aboutSection = document.getElementById('about-strip');
+
+  let rafPending = false;
+  window.addEventListener('scroll', () => {
+    if(!rafPending){
+      rafPending = true;
+      requestAnimationFrame(() => {
+        const y = scrollY;
+        if(moon)  moon.style.transform  = 'translateY('+(y*0.07)+'px)';
+        if(sun)   sun.style.transform   = 'translateY('+(y*0.05)+'px)';
+        if(far)   far.style.transform   = 'translateY('+(y*0.22)+'px)';
+        if(mid)   mid.style.transform   = 'translateY('+(y*0.38)+'px)';
+        if(close) close.style.transform = 'translateY('+(y*0.52)+'px)';
+        if(aboutBg && aboutSection){
+          const rel = -aboutSection.getBoundingClientRect().top;
+          aboutBg.style.transform = 'translateY('+(rel*0.1)+'px)';
+        }
+        rafPending = false;
+      });
+    }
+  }, {passive:true});
+
+  // ── COUNTER ANIMATION ──
+  function runCounter(el){
+    const target = parseInt(el.dataset.target);
+    const t0 = performance.now();
+    const dur = 1600;
+    function step(now){
+      const p = Math.min((now-t0)/dur, 1);
+      const ease = 1 - Math.pow(1-p, 3);
+      el.textContent = Math.floor(ease * target);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ── SCROLL REVEAL ──
+  const revObs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if(e.isIntersecting){
+        setTimeout(() => e.target.classList.add('in'), i * 65);
+        revObs.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+  // Counter triggers
+  document.querySelectorAll('.stat-cell').forEach(cell => {
+    const c = cell.querySelector('.counter');
+    if(!c) return;
+    const o = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ runCounter(c); o.unobserve(e.target); }
+      });
+    }, {threshold:0.5});
+    o.observe(cell);
+  });
+
+  // ── WINDOW FLICKER (night only) ──
+  if(info.mode === 'night'){
+    const amber = [];
+    document.querySelectorAll('.skyline-layer svg rect').forEach(r => {
+      const f = r.getAttribute('fill') || '';
+      if(f.includes('232,160')) amber.push(r);
+    });
+    if(amber.length){
+      setInterval(() => {
+        const r = amber[Math.floor(Math.random()*amber.length)];
+        const orig = r.getAttribute('fill');
+        r.setAttribute('fill','rgba(255,252,180,0.95)');
+        setTimeout(() => r.setAttribute('fill', orig), 80 + Math.random()*140);
+      }, 350);
+    }
+  }
+
+})();
+</script>
+</body>
 </html>

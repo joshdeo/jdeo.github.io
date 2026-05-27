@@ -1,202 +1,854 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery 🖼️ - Joshua Deosaran</title>
+  <meta name="description"
+    content="Joshua Deosaran — Selected work. Story Producer, Director, and Documentary Filmmaker." />
+  <link rel="icon" href="resources/images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ═══ PAGE HERO ═══ */
+    .page-hero {
+      padding: 9rem 4rem 4rem;
+      background: var(--ink);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 3rem;
+      border-bottom: 1px solid rgba(200, 80, 42, 0.15);
+    }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Joshua Deosaran</title>
-        <link rel="icon" type="image/x-icon" href="resources/images/favicon.svg">
-        <link href="https://fonts.cdnfonts.com/css/gramophone-nf" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
-    </head>
+    .page-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: var(--paper);
+    }
 
-    <body>
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
 
-        <nav>
-            <ul>
-                <li><a href="index.html"><img class="navbar-links" id="navbar-resize" alt="">HOME</a></li>
-                <li><a href="about.html"><img class="navbar-links" id="navbar-resize" alt="">ABOUT</a></li>
-                <li><a href="gallery.html"><img class="navbar-links" id="navbar-resize" alt="">GALLERY</a></li>
-                <img class="logo-image" src="./resources/images/favicon.svg" alt="">
-            </ul>
-        </nav>
+    .page-hero-right {
+      max-width: 38ch;
+      padding-bottom: 0.5rem;
+    }
 
-        <div class="gallery-container" style="position: relative; top: 100px;">
-            <div class="job-1-gal">
-                <h3>WEST HARBOUR HEROES - SEASON 1 <br> STORY PRODUCER <br> NOV 2025 TO PRESENT </h3>
-                <div class="work-image-container-1">
-                    <video poster="./resources/images/WHH1 Thumbnail .jpg" controls="true"
-                        src="./resources/videos/SERIES TRAILERS/WHH1 TRAILER.mp4"></video>
+    .page-hero-right p {
+      font-size: 0.95rem;
+      color: rgba(244, 241, 234, 0.45);
+      line-height: 1.8;
+    }
 
-                </div>
-            </div>
+    /* ═══ CHAPTER HEADERS ═══ */
+    .gallery-chapter {
+      padding: 3.5rem 4rem 0;
+      background: var(--paper);
+    }
 
-            <div class="job-2-gal">
-                <h3>OYSTER ISLAND - FEATURE-DOCUMENTARY <br> Director <br> APRIL 2025 TO PRESENT </h3>
-                <div class="work-image-container-2">
-                    <!-- <img src="/resources/images/field_resources/greg-boat.jpeg" alt=""> -->
-                    <h1>trailer coming soon</h1>
-                </div>
-            </div>
-            <div class="job-3-gal">
-                <h3>EAST HARBOUR HEROES - SEASON 3 <br> STORY PRODUCER <br> JUL 2024 TO NOV 2025</h3>
-                <div class="work-image-container-3">
-                    <video poster="./resources/images/EHH Thumbnail.jpeg" controls="true"
-                        src="./resources/videos/SERIES TRAILERS/EHH3 Trailer.mp4"></video>
-                </div>
-            </div>
-            <!-- <div class="job-4-gal">
-                <h3>DEVELOPMENT PRODUCER | ATTRACTION | JUN 2024 TO JULY 2024</h3>
-                <div class="work-image-container-4">
-                    <img src="/resources/images/field_resources/greg-boat.jpeg" alt="">
-                </div>
-            </div> -->
-            <div class="job-5-gal">
-                <h3>CLAW HUNTERS | SO1 <br> STORY PRODUCER <br> SEPT 2023 TO JUNE 2024</h3>
-                <div class="work-image-container-5">
-                    <!-- <img src="/resources/images/field_resources/greg-boat.jpeg" alt=""> -->
-                    <video poster="./resources/images/Claw Hunters Thumbnail.jpeg" controls="true"
-                        src="./resources/videos/SERIES TRAILERS/CH trailer-compressed.mov"></video>
-                </div>
-            </div>
-            <!-- <div class="job-6-gal">
-                <h3>DEVELOPMENT RESEARCHER | ATTRACTION | MAY 2023 TO AUGUST 2023</h3>
-                <div class="work-image-container-6">
-                    <img src="/resources/images/field_resources/greg-boat.jpeg" alt="">
-                </div>
-            </div> -->
-            <div class="job-7-gal">
-                <h3>EAST HARBOUR HEROES - SEASON 1 <br> RESEARCHER <br> JUL 2022 TO APRIL 2023</h3>
-                <div class="work-image-container-7">
-                    <video poster="./resources/images/EHH1 thumnail.jpg" controls="true"
-                        src="./resources/videos/SERIES TRAILERS/EHH1 - Trailer.mov"></video>
-                </div>
-            </div>
-            <div class="job-8-gal">
-                <h3>HOW DID THEY FIX THAT? SEASON 2 <br> RESEARCHER <br> MAY 2022 TO JUN 2022</h3>
-                <div class="work-image-container-8">
-                    <video poster="./resources/images/hdtft thumbnail.jpg" controls="true"
-                        src="./resources/videos/SERIES TRAILERS/HDTFT - trailer.mp4"></video>
-                </div>
-            </div>
-            <!-- <div class="job-9-gal">
-                <h3>DAILY PLANET | CHASE PRODUCER | OCT 2016 TO MAY 2018</h3>
-                <div class="work-image-container-9">
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true" src="/resources/videos/Dyson Orchestra - Daily Planet.mp4"></video>
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true" src="/resources/videos/ESA CLUSTER UFO - Daily Planet.mp4"></video>
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true"
-                        src="/resources/videos/Harlem Globetrotters - Rube Goldberg Daily Planet.mp4"></video>
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true"
-                        src="/resources/videos/John Farnworth - Mt. Everest - Daily Planet.mp4"></video>
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true" src="/resources/videos/Little Tikes - Flite Test - Daily Planet.mp4"></video>
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true"
-                        src="/resources/videos/Praying Mantis Stereovision - Daily Planet.mp4"></video>
-                    <h1>Dyson orchestra</h1>
-                    <video controls="true"
-                        src="/resources/videos/Rariphotic Zone Discovery Smithsonian - Daily Planet.mp4"></video>
-                </div>
-            </div> -->
+    .chapter-header {
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(14, 14, 14, 0.1);
+      margin-bottom: 0;
+    }
 
-            <h1>DAILY PLANET - CHASE PRODUCER <br>OCT 2016 TO MAY 2018</h1>
-            <div class="daily-planet-videos">
-                <div class="video-container">
-                    <h3>DYSON ORCHESTRA</h3>
-                    <!-- Use the <video> tag for self-hosted videos -->
-                    <video poster="./resources/images/dysonorchestra.jpg" controls="true"
-                        src="./resources/videos/Dyson Orchestra - Daily Planet.mp4"></video>
-                    <!-- Or use an iframe for external videos (e.g., YouTube) -->
-                    <!-- <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allowfullscreen></iframe> -->
-                </div>
-                <div class="video-container">
-                    <h3>ESA CLUSTER - UFO?</h3>
-                    <video poster="./resources/images/ESAcluster.jpg" controls="true"
-                        src="./resources/videos/ESA CLUSTER UFO - Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>HARLEM GLOBETROTTERS - RUBE GOLDBERG MACHINE</h3>
-                    <video poster="./resources/images/globtrottersRubegoldberg.png" controls="true"
-                        src="./resources/videos/Harlem Globetrotters - Rube Goldberg Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>MT. EVEREST - WORLD RECORD ATTEMPT</h3>
-                    <video poster="./resources/images/John-Farnworth.jpg" controls="true"
-                        src="./resources/videos/John Farnworth - Mt. Everest - Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>LITTLE TIKES CAR - FLIGHT TEST</h3>
-                    <video poster="./resources/images/littletikes.png" controls="true"
-                        src="./resources/videos/Little Tikes - Flite Test - Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>PRAYING MANTIS WEARS 3D GLASSES</h3>
-                    <video poster="./resources/images/mantis3d.jpg" controls="true"
-                        src="./resources/videos/Praying Mantis Stereovision - Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>TWILIGHTZONE DISCOVERED</h3>
-                    <video poster="./resources/images/TwilightZone.jpg" controls="true"
-                        src="./resources/videos/Rariphotic Zone Discovery Smithsonian - Daily Planet.mp4"></video>
-                </div>
-            </div>
+    .chapter-title {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
 
-            <!-- TOP 10 -->
-            <h1>DAILY PLANET - TOP 10 VIDEOS</h1>
-            <div class="daily-planet-videos">
-                <div class="video-container">
-                    <h3>TOP 10 THINGS ASTRONAUTS DO IN SPACE</h3>
-                    <!-- Use the <video> tag for self-hosted videos -->
-                    <video poster="./resources/images/astronautsinspacethumbnail.jpg" controls="true"
-                        src="./resources/videos/Top 10 - Things astronauts do in space.mp4"></video>
-                    <!-- Or use an iframe for external videos (e.g., YouTube) -->
-                    <!-- <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allowfullscreen></iframe> -->
-                </div>
-                <div class="video-container">
-                    <h3>TOP 10 WORLD'S BIGGEST DISPLAYS</h3>
-                    <video poster="./resources/images/displaysthumbnails.jpg" controls="true"
-                        src="./resources/videos/Top 10 - World's Biggest Displays - Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>TOP 10 MOST EXTREME ADVENTURES</h3>
-                    <video poster="./resources/images/extremeadventuresthumbnail.jpg" controls="true"
-                        src="./resources/videos/Top 10 - Extreme Adventures - Daily Planet.mp4"></video>
-                </div>
-                <div class="video-container">
-                    <h3>TOP 10 COOLEST HOLOGRAMS</h3>
-                    <video poster="./resources/images/holothumbnail.jpg" controls="true"
-                        src="./resources/videos/Top 10 - Holograms - Daily Planet.mp4"></video>
-                    </video>
-                </div>
-                <div class="video-container">
-                    <h3>TOP 10 HIGH TECH SNEAKERS</h3>
-                    <video poster="./resources/images/Hightechsneakersthumbnail.png.jpg" controls="true"
-                        src="./resources/videos/Top 10 - High Tech Sneakers - Daily Planet.mp4"></video>
-                    </video>
-                </div>
-                <div class="video-container">
-                    <h3>TOP 10 ROBOTS THAT PLAY SPORTS</h3>
-                    <video poster="./resources/images/robotsthumbnail.jpg" controls="true"
-                        src="./resources/videos/Top 10 - Robots that play sports - Daily Planet.mp4"></video>
-                    </video>
-                </div>
-            </div>
-            <!-- <div class="job-10-gal">
-                <h1>OTHER EXPERIENCE</h1>
-                <h3>APPLE | MAC TECHNICIAN | AUG 2018 TO MAY 2022</h3>
+    .chapter-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
 
-            </div> -->
-            <!-- Footer on top of image -->
+    .chapter-meta {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+
+    /* ═══ VIDEO ENTRY ═══
+       Two-column: description one side, video other.
+       Even entries flip so layout alternates.
+    ═══════════════════ */
+    .video-entry {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+      background: var(--paper);
+      border-bottom: 1px solid rgba(14, 14, 14, 0.08);
+    }
+
+
+    .video-entry-meta {
+      padding: 3rem 2.5rem 3rem 4rem;
+      border-right: 1px solid rgba(14, 14, 14, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .video-entry-role {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .video-entry-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .video-entry-dates {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .video-entry-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    /* Video player column */
+    .video-col {
+      padding: 2.5rem 4rem 2.5rem 3rem;
+      display: flex;
+      align-items: center;
+      background: #ede9e0;
+      justify-content: center;
+    }
+
+    .video-wrap {
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #0e0e0e;
+      border: 1px solid rgba(200, 80, 42, 0.25);
+      box-shadow: 0 4px 28px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(200, 80, 42, 0.08);
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .video-wrap:hover {
+      border-color: rgba(200, 80, 42, 0.55);
+      box-shadow: 0 8px 40px rgba(200, 80, 42, 0.14), 0 0 0 1px rgba(200, 80, 42, 0.2);
+    }
+
+    .video-wrap video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0e0e0e;
+    }
+
+    .video-soon {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #1a1612;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .video-soon-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .video-soon-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(245, 242, 236, 0.35);
+    }
+
+    /* ═══ DAILY PLANET — dark unified block ═══ */
+    .daily-planet-wrap {
+      background: var(--ink);
+    }
+
+    .gallery-chapter-dark {
+      background: transparent;
+      padding: 3.5rem 4rem 0;
+    }
+
+    .gallery-chapter-dark .chapter-header {
+      border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .gallery-chapter-dark .chapter-title {
+      color: var(--paper);
+    }
+
+    .gallery-chapter-dark .chapter-meta {
+      color: rgba(245, 242, 236, 0.35);
+    }
+
+    /* Dark video entries */
+    .daily-planet-wrap .video-entry {
+      background: transparent;
+      border-bottom-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .daily-planet-wrap .video-entry-meta {
+      border-right-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .daily-planet-wrap .video-entry-role {
+      color: var(--accent);
+    }
+
+    .daily-planet-wrap .video-entry-title {
+      color: var(--paper);
+    }
+
+    .daily-planet-wrap .video-entry-dates {
+      color: rgba(245, 242, 236, 0.3);
+    }
+
+    .daily-planet-wrap .video-entry-desc {
+      color: rgba(245, 242, 236, 0.45);
+    }
+
+    .daily-planet-wrap .video-col {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* Daily Planet grid */
+    .video-grid-section {
+      background: transparent;
+      padding: 0 4rem 4rem;
+    }
+
+    .top10-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(245, 242, 236, 0.3);
+      padding: 2.5rem 4rem 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .video-grid-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(200, 80, 42, 0.18);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .video-grid-card:hover {
+      border-color: rgba(200, 80, 42, 0.5);
+      box-shadow: 0 6px 24px rgba(200, 80, 42, 0.12);
+    }
+
+    .video-grid-card video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0e0e0e;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .video-grid-card-meta {
+      padding: 0.85rem 1rem 1rem;
+    }
+
+    .video-grid-card-label {
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .video-grid-card-title {
+      font-family: var(--serif);
+      font-size: 0.92rem;
+      line-height: 1.3;
+      color: var(--paper);
+    }
+
+    /* ═══ CONTACT (gallery page) ═══ */
+    .contact-strip {
+      padding: 6rem 4rem;
+      text-align: center;
+      border-top: 1px solid rgba(14, 14, 14, 0.1);
+      background: var(--paper);
+    }
+
+    .contact-strip h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    .contact-strip h2 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .contact-strip .contact-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 44ch;
+      margin: 0 auto 2.25rem;
+      line-height: 1.8;
+    }
+
+    .contact-strip .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 900px) {
+      .page-hero {
+        flex-direction: column;
+        padding: 7rem 1.5rem 3rem;
+        align-items: flex-start;
+      }
+
+      .gallery-chapter {
+        padding: 2.5rem 1.5rem 0;
+      }
+
+      .gallery-chapter-dark {
+        padding: 2.5rem 1.5rem 0;
+      }
+
+      .video-entry {
+        grid-template-columns: 1fr;
+      }
+
+      .video-entry-meta {
+        padding: 2rem 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(14, 14, 14, 0.08);
+      }
+
+      .video-col {
+        padding: 1.5rem;
+      }
+
+      .daily-planet-wrap .video-entry-meta {
+        border-bottom-color: rgba(255, 255, 255, 0.06);
+      }
+
+      .video-grid-section {
+        padding: 0 1.5rem 3rem;
+      }
+
+      .top10-label {
+        padding: 2rem 1.5rem 1rem;
+      }
+
+      .contact-strip {
+        padding: 4rem 1.5rem;
+      }
+
+      .contact-strip .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+      }
+    }
+  </style>
+</head>
+
+<body class="gallery-page">
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a class="nav-logo" href="index.html">Joshua Deosaran</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html" class="active">Work</a></li>
+  </ul>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>Selected<br><em>Work.</em></h1>
+    <div class="page-hero-right fade-in">
+      <p>Series, documentaries, and broadcast pieces from nearly a decade in television — from researcher to story
+        producer, director, and beyond.</p>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="marquee-star">★</span>Story Producer</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Creative Director</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Documentary Filmmaker</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Field Producer</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Director</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Apple TV+</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Prime Video</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>The Weather Channel</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>New York City</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Story Producer</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Creative Director</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Documentaries</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Field Producer</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Director</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Apple TV+</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Prime Video</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>The Weather Channel</div>
+      <div class="marquee-item"><span class="marquee-star">★</span>Toronto, Canada</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+     SERIES TRAILERS
+══════════════════════════════════════════ -->
+
+  <!-- OYSTER ISLAND -->
+  <section class="gallery-chapter" id="oyster-island">
+    <div class="chapter-header fade-in">
+      <div class="chapter-title">Oyster Island — <em>Feature Documentary</em></div>
+      <div class="chapter-meta">Director &nbsp;&middot;&nbsp; April 2025 – Present</div>
+    </div>
+  </section>
+  <div class="video-entry fade-in">
+    <div class="video-entry-meta">
+      <div class="video-entry-role">Director</div>
+      <div class="video-entry-title">Oyster Island</div>
+      <div class="video-entry-dates">April 2025 – Present</div>
+      <p class="video-entry-desc">My first feature and Director credit. 18 months in Prince Edward Island. A story of
+        community, resilience, and loss as disease devastates the oyster population. Festival premiere 2026.</p>
+    </div>
+    <div class="video-col">
+      <div class="video-wrap">
+        <div class="video-soon">
+          <div class="video-soon-label">Trailer coming soon</div>
+          <div class="video-soon-sub">Festival premiere 2026</div>
         </div>
-    </body>
-    <script src="scrpt.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEST HARBOUR HEROES -->
+  <section class="gallery-chapter" id="west-harbour-heroes">
+    <p class="section-label fade-in">Series trailers</p>
+    <div class="chapter-header fade-in">
+      <div class="chapter-title">West Harbour Heroes — <em>Season 1</em></div>
+      <div class="chapter-meta">Story Producer &nbsp;&middot;&nbsp; Nov 2025 – Present</div>
+    </div>
+  </section>
+  <div class="video-entry fade-in">
+    <div class="video-entry-meta">
+      <div class="video-entry-role">Story Producer</div>
+      <div class="video-entry-title">West Harbour Heroes</div>
+      <div class="video-entry-dates">Nov 2025 – Present</div>
+      <p class="video-entry-desc">British Columbia. Search &amp; Rescue. Helicopters. <br> <br> Ten episodes produced
+        remotely from Toronto and in the field.</p>
+      <a class="work-link" href="https://www.instagram.com/westharbourheroes/" target="_blank"
+        rel="noopener">@westharbourheroes &rarr;</a>
+    </div>
+    <div class="video-col">
+      <div class="video-wrap">
+        <video poster="resources/images/WHH1 Thumbnail .jpg" controls preload="none">
+          <source src="resources/videos/SERIES TRAILERS/WHH1 TRAILER.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- EAST HARBOUR HEROES S3 -->
+  <section class="gallery-chapter" id="east-harbour-s3">
+    <div class="chapter-header fade-in">
+      <div class="chapter-title">East Harbour Heroes — <em>Season 3</em></div>
+      <div class="chapter-meta">Story Producer &nbsp;&middot;&nbsp; Jul 2024 – Nov 2025</div>
+    </div>
+  </section>
+  <div class="video-entry fade-in">
+    <div class="video-entry-meta">
+      <div class="video-entry-role">Story Producer</div>
+      <div class="video-entry-title">East Harbour Heroes S3</div>
+      <div class="video-entry-dates">Jul 2024 – Nov 2025</div>
+      <p class="video-entry-desc">East Harbour Heroes S03 is a saltwater-soaked journey to the easternmost point of
+        North
+        America, where a vibrant community of tough individuals battle the rugged coast and the North Atlantic Ocean to
+        live and work on the edge of the world..</p>
+      <a class="work-link" href="https://tv.apple.com/ca/show/east-harbour-heroes/umc.cmc.alrl9su22yf8c20on5soy1ua"
+        target="_blank" rel="noopener">Watch on Apple TV+ &rarr;</a>
+    </div>
+    <div class="video-col">
+      <div class="video-wrap">
+        <video poster="resources/images/EHH Thumbnail.jpeg" controls preload="none">
+          <source src="resources/videos/SERIES TRAILERS/EHH3 Trailer.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLAW HUNTERS -->
+  <section class="gallery-chapter" id="claw-hunters">
+    <div class="chapter-header fade-in">
+      <div class="chapter-title">Claw Hunters — <em>Season 1</em></div>
+      <div class="chapter-meta">Story Producer &nbsp;&middot;&nbsp; Sept 2023 – Jun 2024 &nbsp;&middot;&nbsp; The
+        Weather Channel</div>
+    </div>
+  </section>
+  <div class="video-entry fade-in">
+    <div class="video-entry-meta">
+      <div class="video-entry-role">Story Producer</div>
+      <div class="video-entry-title">Claw Hunters</div>
+      <div class="video-entry-dates">Sept 2023 – Jun 2024</div>
+      <p class="video-entry-desc">
+        CLAW HUNTERS follows five bold lobster harvesters as they navigate the extreme weather of the North Atlantic in
+        search of a fortune. Steeped in tradition and generations of experience, these five Captains and their hardy
+        crews face perilous challenges and fishing in treacherous winter waters.</p>
+      <a class="work-link" href="https://tv.apple.com/ru/show/claw-hunters/umc.cmc.3vkcglcf0ujv1v0z78gjpz7nq?l=en"
+        target="_blank" rel="noopener">Watch on Apple TV+ &rarr;</a>
+    </div>
+    <div class="video-col">
+      <div class="video-wrap">
+        <video poster="resources/images/Claw Hunters Thumbnail.jpeg" controls preload="none">
+          <source src="resources/videos/SERIES TRAILERS/CH trailer-compressed.mov" type="video/quicktime" />
+          <source src="resources/videos/SERIES TRAILERS/CH trailer-compressed.mov" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- EAST HARBOUR HEROES S1 -->
+  <section class="gallery-chapter" id="east-harbour-s1">
+    <div class="chapter-header fade-in">
+      <div class="chapter-title">East Harbour Heroes — <em>Season 1</em></div>
+      <div class="chapter-meta">Researcher &nbsp;&middot;&nbsp; Jul 2022 – April 2023</div>
+    </div>
+  </section>
+  <div class="video-entry fade-in">
+    <div class="video-entry-meta">
+      <div class="video-entry-role">Researcher</div>
+      <div class="video-entry-title">East Harbour Heroes S1</div>
+      <div class="video-entry-dates">Jul 2022 – April 2023</div>
+      <p class="video-entry-desc">The people who live and work on the brutal east coast of Newfoundland battle the
+        elements and the North Atlantic for survival.</p>
+      <a class="work-link" href="https://www.primevideo.com/detail/East-Harbour-Heroes/0II5RS6NN11CZ9XYZ37WQ2ZA4R"
+        target="_blank" rel="noopener">Watch on Prime Video &rarr;</a>
+    </div>
+    <div class="video-col">
+      <div class="video-wrap">
+        <video poster="resources/images/EHH1 thumnail.jpg" controls preload="none">
+          <source src="resources/videos/SERIES TRAILERS/EHH1 - Trailer.mov" type="video/quicktime" />
+          <source src="resources/videos/SERIES TRAILERS/EHH1 - Trailer.mov" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW DID THEY FIX THAT -->
+  <section class="gallery-chapter" id="hdtft">
+    <div class="chapter-header fade-in">
+      <div class="chapter-title">How Did They Fix That? — <em>Season 2</em></div>
+      <div class="chapter-meta">Researcher &nbsp;&middot;&nbsp; May 2022 – Jun 2022</div>
+    </div>
+  </section>
+  <div class="video-entry fade-in">
+    <div class="video-entry-meta">
+      <div class="video-entry-role">Researcher</div>
+      <div class="video-entry-title">How Did They Fix That?</div>
+      <div class="video-entry-dates">May 2022 – Jun 2022</div>
+      <p class="video-entry-desc">Global storytelling from the Atacama Desert in Chile to an underwater lab in Florida
+        inspired by Jacques Cousteau. Fast-paced, world-spanning research.</p>
+      <a class="work-link" href="https://tv.apple.com/au/show/impossible-repairs/umc.cmc.3dml15jwu2221d3lnzct03dcf"
+        target="_blank" rel="noopener">Watch on Apple TV+ &rarr;</a>
+    </div>
+    <div class="video-col">
+      <div class="video-wrap">
+        <video poster="resources/images/hdtft thumbnail.jpg" controls preload="none">
+          <source src="resources/videos/SERIES TRAILERS/HDTFT - trailer.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+     DAILY PLANET — dark section, no gap
+══════════════════════════════════════════ -->
+  <div class="daily-planet-wrap">
+
+    <section class="gallery-chapter-dark" id="daily-planet">
+      <p class="section-label fade-in"
+        style="color:var(--accent);font-family:var(--mono);font-size:0.67rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.75rem;">
+        Daily Planet</p>
+      <div class="chapter-header fade-in">
+        <div class="chapter-title">Daily Planet — <em>Chase Producer</em></div>
+        <div class="chapter-meta">Chase Producer &nbsp;&middot;&nbsp; Oct 2016 – May 2018 &nbsp;&middot;&nbsp; Canadian
+          Screen Award</div>
+      </div>
+    </section>
+
+    <div class="video-grid-section">
+      <div class="video-grid">
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/dysonorchestra.jpg" controls preload="none">
+            <source src="resources/videos/Dyson Orchestra - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">Dyson Orchestra</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/ESAcluster.jpg" controls preload="none">
+            <source src="resources/videos/ESA CLUSTER UFO - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">ESA Cluster — UFO?</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/globtrottersRubegoldberg.png" controls preload="none">
+            <source src="resources/videos/Harlem Globetrotters - Rube Goldberg Daily Planet.mp4" type="video/mp4" />
+          </video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">Harlem Globetrotters — Rube Goldberg Machine</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/John-Farnworth.jpg" controls preload="none">
+            <source src="resources/videos/John Farnworth - Mt. Everest - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">Mt. Everest — World Record Attempt</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/littletikes.png" controls preload="none">
+            <source src="resources/videos/Little Tikes - Flite Test - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">Little Tikes Car — Flight Test</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/mantis3d.jpg" controls preload="none">
+            <source src="resources/videos/Praying Mantis Stereovision - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">Praying Mantis Wears 3D Glasses</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/TwilightZone.jpg" controls preload="none">
+            <source src="resources/videos/Rariphotic Zone Discovery Smithsonian - Daily Planet.mp4" type="video/mp4" />
+          </video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Daily Planet</div>
+            <div class="video-grid-card-title">Twilight Zone Discovered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top10-label fade-in">Daily Planet — Top 10 Videos</div>
+
+    <div class="video-grid-section" style="padding-bottom:5rem;">
+      <div class="video-grid">
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/astronautsinspacethumbnail.jpg" controls preload="none">
+            <source src="resources/videos/Top 10 - Things astronauts do in space.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Top 10</div>
+            <div class="video-grid-card-title">Things Astronauts Do in Space</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/displaysthumbnails.jpg" controls preload="none">
+            <source src="resources/videos/Top 10 - World's Biggest Displays - Daily Planet.mp4" type="video/mp4" />
+          </video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Top 10</div>
+            <div class="video-grid-card-title">World's Biggest Displays</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/extremeadventuresthumbnail.jpg" controls preload="none">
+            <source src="resources/videos/Top 10 - Extreme Adventures - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Top 10</div>
+            <div class="video-grid-card-title">Most Extreme Adventures</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/holothumbnail.jpg" controls preload="none">
+            <source src="resources/videos/Top 10 - Holograms - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Top 10</div>
+            <div class="video-grid-card-title">Coolest Holograms</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/Hightechsneakersthumbnail.png.jpg" controls preload="none">
+            <source src="resources/videos/Top 10 - High Tech Sneakers - Daily Planet.mp4" type="video/mp4" /></video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Top 10</div>
+            <div class="video-grid-card-title">High Tech Sneakers</div>
+          </div>
+        </div>
+        <div class="video-grid-card fade-in">
+          <video poster="resources/images/robotsthumbnail.jpg" controls preload="none">
+            <source src="resources/videos/Top 10 - Robots that play sports - Daily Planet.mp4" type="video/mp4" />
+          </video>
+          <div class="video-grid-card-meta">
+            <div class="video-grid-card-label">Top 10</div>
+            <div class="video-grid-card-title">Robots That Play Sports</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.daily-planet-wrap -->
+
+  <!-- CONTACT -->
+  <section class="contact-strip">
+    <p class="section-label fade-in" style="justify-content:center;">Get in touch</p>
+    <h2 class="fade-in">Let's tell a story worth <em>remembering.</em></h2>
+    <p class="contact-sub fade-in">Whether you have a project in mind or just want to connect — I'd love to hear from
+      you.</p>
+    <div class="contact-links fade-in">
+      <a class="btn-glow" href="mailto:joshua.deosaran@gmail.com">E: joshua.deosaran@gmail.com</a>
+      <a class="btn-glow" href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn-glow" href="https://www.instagram.com/nycjosh/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Joshua Deosaran</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 60;
+      nav.classList.toggle('scrolled', scrolled);
+      document.body.classList.toggle('nav-scrolled', scrolled);
+    }, {
+      passive: true
+    });
+
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('navOverlay');
+
+    function openNav() {
+      toggle.classList.add('open');
+      navLinks.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden'; /* prevent scroll behind menu */
+    }
+
+    function closeNav() {
+      toggle.classList.remove('open');
+      navLinks.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.contains('open') ? closeNav() : openNav();
+    });
+
+    /* Tap the dim overlay to close */
+    overlay.addEventListener('click', closeNav);
+
+    /* Close on any link tap */
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+    /* Close on Escape key */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeNav();
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        }
+      });
+    }, {
+      threshold: 0.06
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 
 </html>
