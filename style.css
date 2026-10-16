@@ -873,8 +873,8 @@ body.daytime .cloud { opacity: 1; }
 .video-entry-meta { padding: 2.5rem 2rem 2.5rem 0; border-right: 1px solid rgba(200,80,42,0.15); }
 
 /* Video column */
-.video-entry-player { padding: 2.5rem 0 2.5rem 2.5rem; display: flex; align-items: center; justify-content: center; }
-.video-col { padding: 2.5rem 2rem; display: flex; align-items: center; justify-content: center; }
+.video-entry-player { padding: 2.5rem 0 2.5rem 2.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.video-col { padding: 2.5rem 0 2.5rem 2.5rem; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; }
 
 /* Accent panel — thematic animated SVG */
 .video-entry-panel {
