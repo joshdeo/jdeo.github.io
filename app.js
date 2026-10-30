@@ -80,7 +80,7 @@
       '<span class="tlabel"><span class="tl-photo" style="background-image:url(\'' + url(o.photo) + '\');--pos:' + (o.pos || '50% 50%') + '"></span>' +
       '<span class="tl-text"><span><span class="tl-kicker">' + esc(o.kicker || '') + '</span><br>' +
       '<span class="tl-title" style="--fs:' + fs.toFixed(2) + '">' + esc(o.title) + '</span></span>' +
-      '<span class="tl-meta">' + esc(o.meta || '') + '</span>' +
+      '<span class="tl-meta">' + esc(o.meta || '').replace(/(Apple|Prime|Smithsonian|Weather|Bell|Discovery) (TV\+|Video|Channel|Media|Canada)/g, '$1\u00A0$2') + '</span>' +
       '<span class="tl-no">' + esc(o.no) + '</span></span></span>' +
       '<i class="tgroove"></i><span class="tmark">HQ &nbsp; T-120 &nbsp; SP</span></span>';
     var tag = o.tag || 'a';

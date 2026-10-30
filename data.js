@@ -204,7 +204,7 @@
       dates: 'May 2022 to Jun 2022',
       format: 'Series, Season 2',
       location: 'Around the world',
-      photo: { src: W + 'sm/p-hdtft.jpg', pos: '20% 50%' },
+      photo: { src: W + 'sm/hdtft-dish.jpg', pos: '36% 50%' },
       band: { src: W + 'band/how-did-they-fix-that-s2.jpg', pos: '50% 50%' },
       tagline: ['The Atacama Desert.', 'An underwater lab.', 'Strong stories, fast.'],
       body: [
