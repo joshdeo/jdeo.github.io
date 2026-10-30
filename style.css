@@ -867,7 +867,7 @@ body.daytime .cloud { opacity: 1; }
 }
 
 /* Alternate offset — even entries nudge right */
-.video-entry:nth-child(even) { margin-left: 2rem; }
+.video-entry:nth-child(even) { margin-left: 0; }
 
 .video-entry-title { font-family:var(--serif); font-size:1.15rem; line-height:1.2; letter-spacing:-0.02em; margin-bottom:0.35rem; color:var(--ink); }
 .video-entry-role { font-family:var(--mono); font-size:0.63rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.25rem; }
@@ -878,7 +878,7 @@ body.daytime .cloud { opacity: 1; }
 
 /* Video column */
 .video-entry-player { padding: 2.5rem 0 2.5rem 2.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.video-col { padding: 2.5rem 0 2.5rem 2.5rem; display: flex; align-items: center; justify-content: flex-start; overflow: hidden; }
+.video-col { padding: 2.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 
 /* Accent panel — thematic animated SVG */
 .video-entry-panel {
