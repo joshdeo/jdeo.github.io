@@ -683,3 +683,7 @@ html:not(.js) .rv{opacity:1;transform:none}
 .statband b{font:400 clamp(40px,5.4vw,84px)/1 var(--cond);color:var(--cream)}
 .statband span{font:400 clamp(15px,1.5vw,20px)/1.15 var(--mono);letter-spacing:.1em;text-transform:uppercase;max-width:9em}
 @media (max-width:720px){.statband ul{grid-template-columns:1fr}.statband li{border-left:0;border-top:1px solid rgba(251,233,208,.35);justify-content:flex-start;padding-inline:var(--gut)}.statband li:first-child{border-top:0}}
+
+#clipsT10{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){#clipsT10{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){#clipsT10{grid-template-columns:1fr}}

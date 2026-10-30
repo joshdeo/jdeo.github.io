@@ -344,8 +344,8 @@
     var sbT = $('#sbTapes'), sbC = $('#sbClips');
     if (sbT) sbT.textContent = pad(D.projects.length);
     if (sbC) sbC.textContent = D.clips.length;
-    fill('#clipsDP', 'dp', 0, 4);
-    fill('#clipsT10', 'top10', 2, 3);
+    fill('#clipsDP', 'dp', 0, 99);
+    fill('#clipsT10', 'top10', 2, 99);
   }
 
   /* ---------------------------------------------------------
