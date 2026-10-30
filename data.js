@@ -21,8 +21,8 @@
       dates: 'Jun 2026 to Present',
       format: 'Series episode',
       location: 'On location and in post',
-      photo: { src: W + 'oysters-master.jpg', pos: '50% 38%' },
-      band: { src: W + 'norfolk.jpg', pos: '50% 60%' },
+      photo: { src: W + 'sm/oysters-master.jpg', pos: '50% 38%' },
+      band: { src: W + 'band/how-did-they-fix-that-506.jpg', pos: '50% 50%' },
       tagline: ['From location', 'through post,', 'to final delivery.'],
       body: [
         'My most recent credit. I field produced this episode from location through post, managing contributor relationships, directing scenes, and conducting on-camera interviews. I also shaped the editorial direction through detailed director’s notes and hands-on story editing in Adobe Premiere.',
@@ -50,8 +50,8 @@
       dates: 'Nov 2025 to Jun 2026',
       format: 'Series, ten episodes',
       location: 'Vancouver Island',
-      photo: { src: W + 'corm-comox.jpg', pos: '47% 58%' },
-      band: { src: W + 'corm-comox.jpg', pos: '50% 60%' },
+      photo: { src: W + 'sm/corm-comox.jpg', pos: '47% 58%' },
+      band: { src: W + 'band/west-harbour-heroes-s1.jpg', pos: '50% 50%' },
       tagline: ['Helicopters.', 'Parachutes.', 'Search and Rescue.'],
       body: [
         'West Harbour Heroes took everything we did in Newfoundland’s East Harbour Heroes and brought it to the West Coast. For our first shoot, it allowed me to travel to Vancouver Island to shoot with the 442 Search and Rescue team. We filmed in helicopters, parachuted from Twin Otter aircraft, and explored the new Airbus Kingfisher 295 aircraft.',
@@ -81,8 +81,8 @@
       dates: 'Apr 2025 to Jun 2026',
       format: 'Feature documentary',
       location: 'Prince Edward Island',
-      photo: { src: W + 'carl-cafe.jpg', pos: '50% 62%' },
-      band: { src: W + 'carl-cafe.jpg', pos: '50% 66%' },
+      photo: { src: W + 'sm/carl-cafe.jpg', pos: '50% 62%' },
+      band: { src: W + 'band/oyster-island.jpg', pos: '50% 50%' },
       tagline: ['Community.', 'Resilience.', 'Loss.'],
       body: [
         'My first Feature Documentary Producer credit, this feature took me to Prince Edward Island, Canada, where life revolves around agriculture and oysters. Balancing this with West Harbour Heroes pushed me to shift between fast-paced storytelling and a more patient, observational style of filmmaking.',
@@ -112,8 +112,8 @@
       dates: 'Jul 2024 to Nov 2025',
       format: 'Series, Season 3',
       location: 'Newfoundland and Labrador',
-      photo: { src: W + 'ehh3-selfie.jpg', pos: '50% 34%' },
-      band: { src: W + 'ehh3-selfie-wide.jpg', pos: '50% 40%' },
+      photo: { src: W + 'sm/ehh3-selfie.jpg', pos: '50% 34%' },
+      band: { src: W + 'band/east-harbour-heroes-s3.jpg', pos: '50% 50%' },
       tagline: ['A coral garden.', 'A wartime relic.', 'One deep lake.'],
       body: [
         'Season three took me across Newfoundland and Labrador, where I worked closely with cast while traversing both Field Director and Producer roles. The series followed people in Maritime industries, from Fishing to Scientific Research and Marine Stewardship, revealing the communities behind the work.',
@@ -143,8 +143,8 @@
       dates: 'Sep 2023 to Jun 2024',
       format: 'Series, Season 1',
       location: 'Nova Scotia to Maine',
-      photo: { src: W + 'lex-boat.jpg', pos: '50% 32%' },
-      band: { src: W + 'me-lex.jpg', pos: '50% 40%' },
+      photo: { src: W + 'sm/lex-boat.jpg', pos: '50% 32%' },
+      band: { src: W + 'band/claw-hunters-s1.jpg', pos: '50% 50%' },
       tagline: ['Days at sea.', 'Tough conditions.', 'Nova Scotia to Maine.'],
       body: [
         'Claw Hunters was my first real jump into Story Producing. As the sole Producer, I took on the series from the ground up and learned fast. We followed lobster harvesters between Nova Scotia and Maine, between the Bay of Fundy and the Gulf of Maine. I spent days at sea, producing and directing in tough, unpredictable conditions.',
@@ -175,8 +175,8 @@
       dates: 'Jul 2022 to Apr 2023',
       format: 'Series, Season 1',
       location: 'St John’s, Newfoundland',
-      photo: { src: W + 'blake-master.jpg', pos: '24% 50%' },
-      band: { src: W + 'blake-master.jpg', pos: '50% 50%' },
+      photo: { src: W + 'sm/blake-master.jpg', pos: '24% 50%' },
+      band: { src: W + 'band/east-harbour-heroes-s1.jpg', pos: '50% 50%' },
       tagline: ['One small harbour.', 'Big stories.', 'Dig deeper.'],
       body: [
         'Season One was set entirely in St John’s Harbour, Newfoundland and Labrador. This is where I worked closely with the Series Producer to find stories within a very limited world. With restricted access and major players opting out, we had to get creative and dig deeper.',
@@ -204,8 +204,8 @@
       dates: 'May 2022 to Jun 2022',
       format: 'Series, Season 2',
       location: 'Around the world',
-      photo: { src: W + 'p-hdtft.jpg', pos: '20% 50%' },
-      band: { src: W + 'p-hdtft.jpg', pos: '50% 50%' },
+      photo: { src: W + 'sm/p-hdtft.jpg', pos: '20% 50%' },
+      band: { src: W + 'band/how-did-they-fix-that-s2.jpg', pos: '50% 50%' },
       tagline: ['The Atacama Desert.', 'An underwater lab.', 'Strong stories, fast.'],
       body: [
         'Initially titled “Impossible Repairs,” this project marked my real return to the industry, jumping straight into fast-paced, global storytelling. I researched stories around the world, from the Atacama Desert in Chile to an underwater lab in Florida inspired by Jacques Cousteau, quickly getting back into the rhythm of finding strong, compelling stories.'
@@ -230,8 +230,8 @@
       dates: 'Oct 2016 to May 2018',
       format: 'Daily live to air show',
       location: 'Toronto',
-      photo: { src: W + 'dp-terminator.jpg', pos: '50% 32%' },
-      band: { src: W + 'p-twilight.jpg', pos: '50% 50%' },
+      photo: { src: W + 'sm/dp-terminator.jpg', pos: '50% 32%' },
+      band: { src: W + 'band/daily-planet.jpg', pos: '50% 50%' },
       tagline: ['Live to air.', 'Always topical.', 'Never late.'],
       body: [
         'Daily Planet was my entry into the industry in 2016. I started as an intern, moved into research, and eventually became a Chase Producer. Early on, I spent hours transcribing interviews for Story Producers, spending time with their stories and characters gave me a clear goal: I wanted to be the one at the forefront, both producing and shaping these stories.',
