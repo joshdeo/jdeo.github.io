@@ -335,10 +335,15 @@
       if (list.length <= shown) { if (btn) btn.parentNode.hidden = true; return; }
       btn.textContent = 'Load more tapes (' + (list.length - shown) + ')';
       btn.addEventListener('click', function () {
-        $$('li[hidden]', ul).forEach(function (li, k) { li.hidden = false; setTimeout(function () { li.classList.add('in'); }, 60 + k * 70); });
+        var fresh = $$('li[hidden]', ul);
+        fresh.forEach(function (li, k) { li.hidden = false; li.classList.add('in'); });
         btn.parentNode.hidden = true;
+        if (fresh[0] && fresh[0].scrollIntoView) { try { fresh[0].scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' }); } catch (e) {} }
       });
     }
+    var sbT = $('#sbTapes'), sbC = $('#sbClips');
+    if (sbT) sbT.textContent = pad(D.projects.length);
+    if (sbC) sbC.textContent = D.clips.length;
     fill('#clipsDP', 'dp', 0, 4);
     fill('#clipsT10', 'top10', 2, 3);
   }
@@ -609,7 +614,7 @@
         return;
       }
       var mo = t.closest('[data-reelmore]');
-      if (mo) { $$('li[hidden]', proj).forEach(function (li, k) { li.hidden = false; setTimeout(function () { li.classList.add('in'); }, 60 + k * 60); }); mo.parentNode.hidden = true; return; }
+      if (mo) { $$('li[hidden]', proj).forEach(function (li) { li.hidden = false; li.classList.add('in'); }); mo.parentNode.hidden = true; return; }
       var s = t.closest('a[data-slug]');
       if (s) { e.preventDefault(); swapProject(s.getAttribute('data-slug')); }
     });
