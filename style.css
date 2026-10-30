@@ -738,7 +738,7 @@ body.daytime .cloud { opacity: 1; }
 /* Each card is a self-contained block separated by space, not lines */
 .work-entry {
   display: grid;
-  grid-template-columns: 2fr 3fr;   /* image ~40% | content ~60% */
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);   /* image ~40% | content ~60% */
   gap: 0;
   margin-bottom: 4px;               /* tiny gap between cards */
   position: relative;
@@ -747,6 +747,8 @@ body.daytime .cloud { opacity: 1; }
   border: 1px solid rgba(255,255,255,0.05);
 }
 .work-entry:hover { background: rgba(200,80,42,0.04); border-color: rgba(200,80,42,0.15); }
+/* Keep the photo the same width on every card, whichever side it sits */
+.work-entry:nth-child(even) { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
 
 /* ODD entries: image LEFT, text+meta RIGHT */
 .work-entry:nth-child(odd) .work-entry-image-col  { grid-column: 1; grid-row: 1; }
@@ -760,14 +762,16 @@ body.daytime .cloud { opacity: 1; }
 .work-entry-image-col {
   position: relative;
   overflow: hidden;
-  min-height: 240px;
-  max-height: 420px;
+  aspect-ratio: 4 / 3;
+  align-self: stretch;
 }
 .work-entry-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 25%;   /* each photo sets its own focus inline */
   display: block;
   filter: brightness(0.72);
   transition: filter 0.5s, transform 0.5s;
@@ -896,6 +900,7 @@ body.daytime .cloud { opacity: 1; }
   position: relative;
   width: 100%;
   max-width: 720px;
+  margin: 0 auto;
   background: #0e0e0e;
   border: 2px solid rgba(200,80,42,0.35);
   box-shadow:
@@ -1070,7 +1075,8 @@ body.daytime .cloud { opacity: 1; }
   .chapter:nth-child(even) { direction: ltr; } /* reset RTL on mobile */
   .about-work-section { padding: 4rem 1.5rem; }
   .work-entry { grid-template-columns: 1fr; gap: 1.25rem; padding: 2rem 0; }
-  .work-entry-img { max-height: 160px; }
+  .work-entry-img { max-height: none; }
+  .work-entry-image-col { aspect-ratio: 16 / 10; }
   .other-section { padding: 4rem 1.5rem; clear: both; }
   .other-entry { grid-template-columns: 1fr; gap: 0.75rem; padding: 2rem 0; }
       /* Prevent work-link from bleeding outside container on mobile */
