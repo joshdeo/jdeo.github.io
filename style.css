@@ -658,12 +658,11 @@ html:not(.js) .rv{opacity:1;transform:none}
 .onair-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,244,227,.14)}
 .onair-row li{border:1px solid rgba(255,244,227,.14);margin:-.5px}
 .lg{--g:#fff;position:relative;display:flex;align-items:center;justify-content:center;gap:.6em;height:clamp(92px,11vw,138px);padding:0 1rem;color:var(--g);text-decoration:none;isolation:isolate;transition:color .3s}
-.lg::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 50% 50%,color-mix(in srgb,var(--g) 24%,transparent),transparent 72%);opacity:.55;animation:lgpulse 4.8s ease-in-out infinite;animation-delay:calc(var(--i) * -.7s);transition:opacity .35s}
-.lg>*{filter:drop-shadow(0 0 7px color-mix(in srgb,var(--g) 75%,transparent)) drop-shadow(0 0 22px color-mix(in srgb,var(--g) 45%,transparent));transition:filter .35s,transform .45s var(--ease)}
-.lg:hover::before,.lg:focus-visible::before{opacity:1;animation-play-state:paused}
+.lg::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 50% 50%,color-mix(in srgb,var(--g) 26%,transparent),transparent 72%);opacity:0;transition:opacity .4s}
+.lg>*{transition:filter .35s,transform .45s var(--ease)}
+.lg:hover::before,.lg:focus-visible::before{opacity:1}
 .lg:hover>*,.lg:focus-visible>*{filter:drop-shadow(0 0 9px var(--g)) drop-shadow(0 0 30px var(--g)) drop-shadow(0 0 60px color-mix(in srgb,var(--g) 60%,transparent));transform:scale(1.06)}
 .lg:focus-visible{outline:2px solid var(--g);outline-offset:-6px}
-@keyframes lgpulse{50%{opacity:.95}}
 .lg .mk{display:block;width:clamp(30px,3.4vw,46px);aspect-ratio:1;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
 .lg .mk.sq{width:clamp(48px,5.6vw,76px)}
 .lg .pl-plus{font:700 clamp(24px,2.8vw,38px)/1 var(--sans);margin-left:-.5em}
@@ -681,4 +680,4 @@ html:not(.js) .rv{opacity:1;transform:none}
 .lg .bell small{letter-spacing:.3em;font-size:.34em}
 .lg .disc{font:700 clamp(22px,2.6vw,36px)/1 var(--sans);letter-spacing:-.04em}
 @media (max-width:900px){.onair-row{grid-template-columns:repeat(2,1fr)}}
-@media (prefers-reduced-motion:reduce){.lg::before,.onair-tag i{animation:none}}
+@media (prefers-reduced-motion:reduce){.onair-tag i{animation:none}}
