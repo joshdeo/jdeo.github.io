@@ -219,7 +219,7 @@
   function initShelf() {
     var track = $('#track'), row = $('#row'); if (!track || !row) return;
     var n = D.projects.length;
-    var ys = [-3, 5, -5, 4, -4, 6, -3, 4], zs = [-4, 3, -2, 5, -5, 2, -3, 4];
+    var ys = [-1.5, 2.5, -2.5, 2, -2, 3, -1.5, 2], zs = [-4, 3, -2, 5, -5, 2, -3, 4];
     row.innerHTML = D.projects.map(function (p, i) {
       return '<div class="tape-slot" style="--i:' + i + ';--y:' + ys[i % 8] + 'vh;--rz:' + zs[i % 8] + 'deg"><div class="tape-in">' + projectTape(p) + '</div></div>';
     }).join('');
