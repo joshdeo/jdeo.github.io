@@ -769,7 +769,7 @@
   function ready(fn) { if (doc.readyState !== 'loading') fn(); else doc.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     D.pageTitle = doc.title;
-    initWipe(); initCursor(); initNav(); initMail();
+    initWipe(); initNav(); initMail();
     initShelf(); initLibrary(); initCredits();
     initReveal(doc); initCounters();
     initProjects();

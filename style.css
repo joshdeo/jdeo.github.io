@@ -72,7 +72,6 @@ body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;op
 .cursor span{font:400 22px/1 var(--mono);color:var(--cream);opacity:0;transition:opacity .2s;letter-spacing:.05em}
 .cursor.big{width:84px;height:84px;margin:-42px 0 0 -42px}
 .cursor.big span{opacity:1}
-html.has-cursor,html.has-cursor a,html.has-cursor button,html.has-cursor [data-cursor]{cursor:none}
 
 /* ---------- page wipe: VHS colour bars ---------- */
 .wipe{position:fixed;inset:0;z-index:400;pointer-events:none;display:flex;flex-direction:column}
@@ -654,11 +653,11 @@ html:not(.js) .rv{opacity:1;transform:none}
 
 /* networks: a tight row, quiet at rest, soft glow in each brand colour on hover */
 .onair{background:#0f2630;padding:clamp(22px,3vw,34px) var(--gut);border-block:2px solid var(--ink)}
-.onair-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(14px,2.2vw,30px) clamp(26px,3.6vw,56px);max-width:1200px;margin:0 auto}
+.onair-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px clamp(28px,4vw,64px);max-width:1500px;margin:0 auto;padding-inline:clamp(0px,2vw,40px)}
 .lg{--g:#fff;position:relative;display:flex;align-items:center;justify-content:center;gap:.5em;height:clamp(36px,3.6vw,48px);color:var(--g);text-decoration:none;transition:opacity .3s}
-.lg>*{transition:filter .35s}
+.lg>*{filter:drop-shadow(0 0 5px transparent) drop-shadow(0 0 14px transparent) drop-shadow(0 0 28px transparent);transition:filter .9s cubic-bezier(.33,0,.2,1)}
 .lg:hover,.lg:focus-visible{opacity:1}
-.lg:hover>*,.lg:focus-visible>*{filter:drop-shadow(0 0 6px color-mix(in srgb,var(--g) 55%,transparent)) drop-shadow(0 0 16px color-mix(in srgb,var(--g) 32%,transparent))}
+.lg:hover>*,.lg:focus-visible>*{filter:drop-shadow(0 0 5px color-mix(in srgb,var(--g) 40%,transparent)) drop-shadow(0 0 14px color-mix(in srgb,var(--g) 30%,transparent)) drop-shadow(0 0 28px color-mix(in srgb,var(--g) 18%,transparent));transition-duration:.7s}
 .lg:focus-visible{outline:1.5px solid color-mix(in srgb,var(--g) 70%,transparent);outline-offset:6px;border-radius:4px}
 .lg .mk{display:block;width:clamp(20px,1.9vw,26px);aspect-ratio:1;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
 .lg .mk.sq{width:clamp(30px,3vw,40px)}
@@ -674,3 +673,4 @@ html:not(.js) .rv{opacity:1;transform:none}
 .lg .lgimg{display:block;height:clamp(36px,3.6vw,50px);width:auto}
 .lg .lgimg.crave{height:clamp(12px,1.2vw,17px)}
 @media (max-width:640px){.onair-row{gap:14px 24px}.lg{height:34px}}
+@media (max-width:900px){.onair-row{justify-content:space-around}}
