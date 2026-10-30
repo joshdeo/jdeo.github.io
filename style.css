@@ -150,24 +150,23 @@ html.wipe-off .wipe i{transform:translateX(0);animation:wipeOut .5s var(--ease) 
 /* reel windows */
 .win{position:absolute;top:13.4cqw;height:31.5cqw;background:#040506;overflow:hidden;z-index:2;box-shadow:inset 0 .6cqw 1.4cqw rgba(0,0,0,.95),0 0 0 .4cqw #0b0c0e,0 .3cqw 0 .55cqw rgba(255,255,255,.09)}
 .win.l{left:3.2cqw;width:24.6cqw;border-radius:5cqw 1.2cqw 1.2cqw 5cqw}
-.win.r{right:3.2cqw;width:20.8cqw;border-radius:1.2cqw 5cqw 5cqw 1.2cqw}
+.win.r{right:3.2cqw;width:24.6cqw;border-radius:1.2cqw 5cqw 5cqw 1.2cqw}
 .win::after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.2) 0,rgba(255,255,255,.04) 34%,rgba(255,255,255,0) 52%);pointer-events:none;z-index:3}
 .pack{position:absolute;border-radius:50%;background:radial-gradient(circle,#050505 0 40%,transparent 41%),repeating-radial-gradient(circle,#2a1f19 0 .35cqw,#1d1511 .35cqw .8cqw)}
-.win.l .pack{width:30cqw;height:30cqw;left:-2.2cqw;top:.7cqw}
-.win.r .pack{width:21cqw;height:21cqw;left:-9.5cqw;top:5cqw}
+.win.l .pack{width:23cqw;height:23cqw;left:calc(50% - 11.5cqw);top:calc(50% - 11.5cqw)}
+.win.r .pack{width:18cqw;height:18cqw;left:calc(50% - 9cqw);top:calc(50% - 9cqw)}
 .hub{position:absolute;border-radius:50%;background:
   radial-gradient(circle at 50% 50%,#0d0e10 0 17%,transparent 18%),
   radial-gradient(circle at 50% 19%,#18191c 0 7.5%,transparent 8.5%),radial-gradient(circle at 78% 34%,#18191c 0 7.5%,transparent 8.5%),radial-gradient(circle at 78% 66%,#18191c 0 7.5%,transparent 8.5%),
   radial-gradient(circle at 50% 81%,#18191c 0 7.5%,transparent 8.5%),radial-gradient(circle at 22% 66%,#18191c 0 7.5%,transparent 8.5%),radial-gradient(circle at 22% 34%,#18191c 0 7.5%,transparent 8.5%),
   radial-gradient(circle,#f4efe4 0 100%);
   box-shadow:0 0 0 .5cqw #cfc9bb,0 0 1cqw rgba(0,0,0,.6);animation:spin 3.6s linear infinite;animation-play-state:paused}
-.win.l .hub{width:12.4cqw;height:12.4cqw;left:3.8cqw;top:9.4cqw}
-.win.r .hub{width:9.6cqw;height:9.6cqw;left:-3.4cqw;top:10.4cqw}
+.win .hub{width:11.4cqw;height:11.4cqw;left:calc(50% - 5.7cqw);top:calc(50% - 5.7cqw)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .tape:hover .hub,.tape:focus-visible .hub,.tape.spin .hub{animation-play-state:running}
 
 /* centre label sticker */
-.tlabel{position:absolute;left:30cqw;top:14cqw;width:41.6cqw;height:28.6cqw;background:var(--lb);color:var(--li);border-radius:.8cqw;overflow:hidden;display:grid;grid-template-columns:16cqw 1fr;z-index:3;box-shadow:0 .3cqw .7cqw rgba(0,0,0,.65),0 0 0 .22cqw rgba(255,255,255,.1)}
+.tlabel{position:absolute;left:29.2cqw;top:14cqw;width:41.6cqw;height:28.6cqw;background:var(--lb);color:var(--li);border-radius:.8cqw;overflow:hidden;display:grid;grid-template-columns:16cqw 1fr;z-index:3;box-shadow:0 .3cqw .7cqw rgba(0,0,0,.65),0 0 0 .22cqw rgba(255,255,255,.1)}
 .tlabel::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,0) 38%,rgba(0,0,0,.1)),radial-gradient(circle at 98% 100%,rgba(0,0,0,.26) 0,transparent 5cqw)}
 .tl-photo{position:relative;background-color:rgba(0,0,0,.2);background-size:cover;background-position:var(--pos,50% 50%);border-right:.3cqw solid rgba(0,0,0,.28)}
 .tl-photo::after{content:"";position:absolute;inset:0;background:var(--lb);mix-blend-mode:soft-light;opacity:.32}
@@ -189,7 +188,7 @@ html.wipe-off .wipe i{transform:translateX(0);animation:wipeOut .5s var(--ease) 
 .tape:focus-visible{outline:none}
 
 /* clip variant: the poster fills the label, the title sits under the tape */
-.tape.is-clip .tlabel{grid-template-columns:1fr;left:27.5cqw;width:46cqw}
+.tape.is-clip .tlabel{grid-template-columns:1fr;left:28.5cqw;width:43cqw}
 .tape.is-clip .tl-photo{border-right:0}
 .tape.is-clip .tl-photo::after{opacity:0}
 .tape.is-clip .tl-text{position:absolute;right:0;top:0;padding:1cqw;display:block}
