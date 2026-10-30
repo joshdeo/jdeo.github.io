@@ -1,487 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About, Joshua Deosaran</title>
-  <meta name="description" content="Joshua Deosaran — Creative Director, Producer & Storyteller. Born in New York, built in Toronto." />
-  <link rel="icon" href="resources/images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* Work entry mobile reset */
-    @media (max-width: 900px) {
-      .work-entry { grid-template-columns: 1fr !important; }
-      .work-entry:nth-child(odd)  .work-entry-image-col,
-      .work-entry:nth-child(even) .work-entry-image-col  { grid-column: 1; grid-row: 1; }
-      .work-entry:nth-child(odd)  .work-entry-content-col,
-      .work-entry:nth-child(even) .work-entry-content-col { grid-column: 1; grid-row: 2; }
-      .work-entry-image-col { min-height: 220px; border-right: none !important; border-left: none !important; border-bottom: 3px solid var(--accent); }
-      .work-entry-content-col { padding: 2rem 1.5rem 2rem; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About, Joshua Deosaran</title>
+<meta name="description" content="Producer, creative director and storyteller. Born in New York, built in Toronto. The full story and every credit, from Daily Planet to a debut feature documentary.">
+<meta name="theme-color" content="#F6ECD9">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About, Joshua Deosaran">
+<meta property="og:description" content="Producer, creative director and storyteller. Born in New York, built in Toronto. The full story and every credit, from Daily Planet to a debut feature documentary.">
+<meta property="og:image" content="https://joshdeo.github.io/jdeo.github.io/resources/web/corm-comox.jpg">
+<link rel="icon" href="resources/web/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="resources/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="resources/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{if(sessionStorage.getItem('jdwipe'))document.documentElement.className+=' wipe-off'}catch(e){}</script>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="about-page">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wipe" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-<!-- NAV -->
-<nav id="mainNav">
-  <a class="nav-logo" href="index.html">Joshua Deosaran</a>
-<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-    <span></span><span></span><span></span>
-  </button>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Joshua Deosaran, home"><span class="brand-mark"><b>JD</b></span><span class="brand-name">Joshua Deosaran</span></a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="index.html">Shelf</a>
+    <a href="gallery.html">Library</a>
+    <a href="about.html" aria-current="page">About</a>
+  </nav>
+  <a class="pill nav-cta" href="mailto:joshua.deosaran@gmail.com">Say hello</a>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+</header>
+<nav class="mmenu" aria-label="Mobile">
+  <a href="index.html">Shelf</a>
+  <a href="gallery.html">Library</a>
+  <a href="about.html">About</a>
+  <a href="mailto:joshua.deosaran@gmail.com"><em>Say hello</em></a>
+  <small>Toronto + New York</small>
 </nav>
-<ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="gallery.html">Work</a></li>
-  </ul>
 
-<div class="nav-overlay" id="navOverlay"></div>
-
-<!-- ABOUT HERO -->
-<section class="about-hero">
-  <div class="about-hero-left">
-    <p class="hero-label">About me</p>
-    <h1>Producer.<br><em>Director.</em><br>Storyteller.</h1>
-  </div>
-  <div class="about-hero-right fade-in">
-    <p>I'm a producer and creative director based in Toronto, with nearly a decade of experience in unscripted television and independent film. My work spans broadcast networks, streaming platforms, and the open ocean, from lobster boats off the coast of Maine to Search and Rescue operations on Vancouver Island.</p>
-    <p>My credits include series for Apple TV+, Prime Video, and The Weather Channel, as well as my debut feature documentary <em>Oyster Island</em>, set to premiere at festivals in 2026. I bring the same care and discipline to a ten-episode network series as I do to a single scene.</p>
-    <div class="btn-row" style="margin-top:1.75rem;">
-      <a class="btn-primary" href="gallery.html">See my work &rarr;</a>
-      <a class="btn-ghost" href="mailto:joshua.deosaran@gmail.com">Get in touch</a>
-          </div>
+<main id="main">
+  <div class="page-top wrap">
+    <div class="hero-type">
+      <div class="rule"></div>
+      <h1><span class="rv">Producer.</span><span class="rv" style="--d:.08s">Creative <em>director.</em></span><span class="rv" style="--d:.16s">Storyteller.</span></h1>
+      <div class="rule"></div>
+      <p class="sub rv">Joshua Deosaran &nbsp;&middot;&nbsp; Toronto + New York</p>
     </div>
-  </div>
-</section>
-
-<!-- STORY IMAGE STRIP -->
-<div class="story-image-strip">
-  <!--
-    Replace this src with your preferred hero photo.
-    Good options from your existing images:
-      resources/images/personal_images/de2-extended.jpeg
-  -->
-  <img src="resources/images/personal_images/de2-extended.jpeg" alt="Joshua Deosaran on location" />
-  <div class="story-image-caption">
-    <p>"The best stories aren't found, they're earned through time, trust, and showing up."</p>
-    <span>Joshua Deosaran, 2026</span>
-  </div>
-</div>
-
-<!-- MARQUEE -->
-<div class="marquee-strip" aria-hidden="true">
-  <div class="marquee-track">
-    <div class="marquee-item"><span class="marquee-dot"></span>New York City</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Fort Lauderdale</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Toronto</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Newfoundland</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Vancouver Island</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Prince Edward Island</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Nova Scotia</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Maine</div>
-    <!-- repeat -->
-    <div class="marquee-item"><span class="marquee-dot"></span>New York City</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Fort Lauderdale</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Toronto</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Newfoundland</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Vancouver Island</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Prince Edward Island</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Nova Scotia</div>
-    <div class="marquee-item"><span class="marquee-dot"></span>Maine</div>
-  </div>
-</div>
-
-<!-- STORY CHAPTERS -->
-<section class="chapters-section">
-  <p class="section-label fade-in">The story so far</p>
-  <h2 class="fade-in">Three cities.<br>One <em>through line.</em></h2>
-
-  <div class="chapter fade-in">
-    <div class="chapter-city">
-      <em>Chapter I</em>
-      New York City
-    </div>
-    <div class="chapter-body">
-      Growing up in Staten Island and Queens gave me an early education in culture, community, and paying attention. The city moves fast and expects you to keep up, whether you're absorbing the music, the fashion, or just watching how people carry themselves on the train. I was always watching.
-      <br><br>
-      That curiosity became a constant. I got obsessed with how stories get told, in music, in sport, in science. I once wrote to NASA as a kid asking about extraterrestrial life. I'm still asking questions like that. The medium has just gotten a lot more cinematic.
-    </div>
-    <div class="chapter-illustration">
-      <svg viewBox="0 0 220 180" width="220" height="180" xmlns="http://www.w3.org/2000/svg" style="opacity:0.2;filter:drop-shadow(0 0 8px rgba(200,80,42,0.3))">
-        <rect x="95" y="30" width="30" height="150" fill="#c8502a"/>
-        <rect x="102" y="10" width="16" height="22" fill="#c8502a"/>
-        <rect x="107" y="2" width="6" height="10" fill="#e8a030"/>
-        <rect x="40" y="70" width="22" height="110" fill="#8a5a3a"/>
-        <rect x="65" y="55" width="26" height="125" fill="#9a6a4a"/>
-        <rect x="129" y="60" width="24" height="120" fill="#9a6a4a"/>
-        <rect x="156" y="80" width="20" height="100" fill="#8a5a3a"/>
-        <rect x="100" y="45" width="3" height="3" fill="#e8a030" opacity="0.8"/>
-        <rect x="106" y="45" width="3" height="3" fill="#e8a030" opacity="0.6"/>
-        <rect x="100" y="55" width="3" height="3" fill="#e8a030" opacity="0.7"/>
-        <rect x="45" y="85" width="3" height="3" fill="#e8a030" opacity="0.5"/>
-        <rect x="70" y="70" width="3" height="3" fill="#e8a030" opacity="0.5"/>
-        <ellipse cx="62" cy="54" rx="6" ry="3" fill="#7a4a2a"/>
-        <rect x="57" y="54" width="10" height="10" fill="#7a4a2a"/>
-        <rect x="60" y="42" width="4" height="12" fill="#6a3a1a"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="chapter fade-in">
-    <div class="chapter-city">
-      <em>Chapter II</em>
-      Fort Lauderdale
-    </div>
-    <div class="chapter-body">
-      In 2004, my mom and I moved to South Florida, a big shift, but one that opened things up considerably. Life ran at a different pace down there. Warmer, more open. We were in the eye of Hurricane Katrina that summer, which sounds dramatic, but honestly, what I remember most is how people just got on with it.
-      <br><br>
-      My mom made sure there was still room to be a kid, weekends on Ocean Drive, long afternoons on South Beach, watching the world go by outside the Versace Mansion. That time taught me to slow down and actually look at where I am. It's something I carry into every shoot.
-    </div>
-    <div class="chapter-illustration">
-      <svg viewBox="0 0 220 180" width="220" height="180" xmlns="http://www.w3.org/2000/svg" style="opacity:0.2;filter:drop-shadow(0 0 8px rgba(200,80,42,0.3))">
-        <circle cx="110" cy="55" r="28" fill="#e8a030" opacity="0.9"/>
-        <line x1="110" y1="15" x2="110" y2="5" stroke="#e8a030" stroke-width="2.5"/>
-        <line x1="140" y1="25" x2="148" y2="17" stroke="#e8a030" stroke-width="2.5"/>
-        <line x1="150" y1="55" x2="160" y2="55" stroke="#e8a030" stroke-width="2.5"/>
-        <line x1="80"  y1="25" x2="72"  y2="17" stroke="#e8a030" stroke-width="2.5"/>
-        <line x1="70"  y1="55" x2="60"  y2="55" stroke="#e8a030" stroke-width="2.5"/>
-        <rect x="55" y="110" width="6" height="65" fill="#7a5a2a"/>
-        <ellipse cx="58" cy="108" rx="22" ry="10" fill="#4a8a3a" transform="rotate(-15,58,108)"/>
-        <ellipse cx="58" cy="108" rx="22" ry="10" fill="#5a9a4a" transform="rotate(20,58,108)"/>
-        <ellipse cx="58" cy="108" rx="22" ry="10" fill="#4a8a3a" transform="rotate(-45,58,108)"/>
-        <rect x="158" y="120" width="5" height="55" fill="#7a5a2a"/>
-        <ellipse cx="160" cy="118" rx="18" ry="8" fill="#4a8a3a" transform="rotate(-10,160,118)"/>
-        <ellipse cx="160" cy="118" rx="18" ry="8" fill="#5a9a4a" transform="rotate(25,160,118)"/>
-        <path d="M20 165 Q55 155 90 165 Q125 175 160 165 Q185 158 210 165" stroke="#4a9fd4" stroke-width="2.5" fill="none"/>
-        <path d="M20 172 Q60 162 100 172 Q140 182 180 172 L210 172" stroke="#4a9fd4" stroke-width="2" fill="none" opacity="0.5"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="chapter fade-in">
-    <div class="chapter-city">
-      <em>Chapter III</em>
-      Toronto
-    </div>
-    <div class="chapter-body">
-      I moved to Toronto at 14 to be closer to my grandmother and great aunts, and it turned out to be the chapter that shaped everything. It's where I grew up for real, made lifelong friends, figured out who I was, and eventually found the work I wanted to do.
-      <br><br>
-      Toronto is a city built from the collision of cultures, and learning to move through that environment taught me something invaluable: how to listen before you speak, and how to connect with people who see the world very differently than you do. That skill, building trust quickly, across difference, is probably the most important thing I bring into the field.
-    </div>
-    <div class="chapter-illustration">
-      <svg viewBox="0 0 220 180" width="220" height="180" xmlns="http://www.w3.org/2000/svg" style="opacity:0.2;filter:drop-shadow(0 0 8px rgba(200,80,42,0.3))">
-        <rect x="106" y="50" width="8" height="130" fill="#c8502a"/>
-        <polygon points="110,10 120,55 100,55" fill="#c8502a"/>
-        <ellipse cx="110" cy="75" rx="16" ry="9" fill="#a83d1e"/>
-        <circle cx="110" cy="68" r="4" fill="#e8a030"/>
-        <rect x="108" y="10" width="4" height="10" fill="#e8a030"/>
-        <rect x="40" y="80" width="28" height="100" fill="#8a5a3a"/>
-        <rect x="72" y="65" width="24" height="115" fill="#9a6a4a"/>
-        <rect x="128" y="72" width="24" height="108" fill="#9a6a4a"/>
-        <rect x="156" y="88" width="22" height="92" fill="#8a5a3a"/>
-        <rect x="45" y="90" width="4" height="4" fill="#e8a030" opacity="0.5"/>
-        <rect x="53" y="90" width="4" height="4" fill="#e8a030" opacity="0.5"/>
-        <rect x="77" y="75" width="4" height="4" fill="#e8a030" opacity="0.5"/>
-        <rect x="133" y="82" width="4" height="4" fill="#e8a030" opacity="0.5"/>
-        <path d="M10 168 Q55 160 110 168 Q165 176 210 168" stroke="#4a9fd4" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="chapter fade-in">
-    <div class="chapter-city">
-      <em>Chapter IV</em>
-      What's Next
-    </div>
-    <div class="chapter-body">
-      Right now I'm focused on bringing everything together, the places I've lived, the people I've met, the kind of stories that don't get told often enough. <em>Oyster Island</em> is the most complete expression of that so far, and there's more coming.
-      <br><br>
-      I want to keep building on documentary work while taking on projects with more creative ownership. If you're a network, production company, or independent creator who cares about authentic, character-driven storytelling, I'd love to hear what you're working on.
-    </div>
-    <div class="chapter-illustration">
-      <svg viewBox="0 0 220 180" width="220" height="180" xmlns="http://www.w3.org/2000/svg" style="opacity:0.2;filter:drop-shadow(0 0 8px rgba(200,80,42,0.3))">
-        <circle cx="110" cy="90" r="60" stroke="#c8502a" stroke-width="3" fill="none"/>
-        <circle cx="110" cy="90" r="22" fill="#c8502a" opacity="0.35"/>
-        <circle cx="110" cy="90" r="10" fill="#e8a030" opacity="0.8"/>
-        <circle cx="110" cy="38" r="8" stroke="#c8502a" stroke-width="2" fill="none"/>
-        <circle cx="110" cy="142" r="8" stroke="#c8502a" stroke-width="2" fill="none"/>
-        <circle cx="62"  cy="63"  r="8" stroke="#c8502a" stroke-width="2" fill="none"/>
-        <circle cx="158" cy="63"  r="8" stroke="#c8502a" stroke-width="2" fill="none"/>
-        <circle cx="62"  cy="117" r="8" stroke="#c8502a" stroke-width="2" fill="none"/>
-        <circle cx="158" cy="117" r="8" stroke="#c8502a" stroke-width="2" fill="none"/>
-        <line x1="110" y1="46"  x2="110" y2="68"  stroke="#c8502a" stroke-width="1.5"/>
-        <line x1="110" y1="112" x2="110" y2="134" stroke="#c8502a" stroke-width="1.5"/>
-        <line x1="68"  y1="67"  x2="88"  y2="78"  stroke="#c8502a" stroke-width="1.5"/>
-        <line x1="132" y1="102" x2="152" y2="113" stroke="#c8502a" stroke-width="1.5"/>
-        <line x1="68"  y1="113" x2="88"  y2="102" stroke="#c8502a" stroke-width="1.5"/>
-        <line x1="132" y1="78"  x2="152" y2="67"  stroke="#c8502a" stroke-width="1.5"/>
-        <polygon points="102,80 102,100 122,90" fill="#e8a030" opacity="0.9"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- WORK EXPERIENCE -->
-<section class="about-work-section" id="experience">
-  <p class="section-label fade-in">Work experience</p>
-  <h2 class="fade-in">On the <em>ground.</em><br>On the air.</h2>
-
-  <div class="work-entries-wrap">
-
-  <!-- How Did They Fix That S506 -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/oysters-master.jpeg" style="object-position: 50% 26%" alt="How Did They Fix That" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Field Producer &amp; Story Editor</div>
-        <div class="work-show">How Did They Fix That?, Ep 506 &mdash; Smithsonian Channel / Paramount+</div>
-        <div class="work-dates">Jun 2026 – Present</div>
+    <div class="intro">
+      <div class="a rv">
+        <p>I&rsquo;m a producer and creative director based in Toronto, with nearly a decade of experience in unscripted television and independent film. My work spans broadcast networks, streaming platforms, and the open ocean, from lobster boats off the coast of Maine to Search and Rescue operations on Vancouver Island.</p>
+        <p>My credits include series for Apple TV+, Prime Video, and The Weather Channel, as well as my debut feature documentary <a href="#/oyster-island" data-slug="oyster-island"><em>Oyster Island</em></a>, set to premiere at festivals in 2026. I bring the same care and discipline to a ten-episode network series as I do to a single scene.</p>
+        <div class="pills"><a class="pill solid" href="gallery.html">See my work</a><a class="pill" href="mailto:joshua.deosaran@gmail.com">Get in touch</a></div>
       </div>
-      <p class="work-body">My most recent credit. I field produced this episode from location through post, managing contributor relationships, directing scenes, and conducting on-camera interviews. I also shaped the editorial direction through detailed director's notes and hands-on story editing in Adobe Premiere.</p>
-      <p class="work-body">Working closely with the executive producer and editor, I helped refine structure, pacing, and character arcs through to final delivery. It's the most complete version of the field-to-post role I've built toward.</p>
-    </div>
-  </div>
-
-  <!-- West Harbour Heroes -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/corm-comox.jpeg" style="object-position: 19% 50%" alt="West Harbour Heroes" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Story Producer</div>
-        <div class="work-show">West Harbour Heroes, Season 1</div>
-        <div class="work-dates">Nov 2025 – Jun 2026</div>
+      <div class="b rv" style="--d:.1s">
+        <div class="photo"><img src="resources/web/de2.jpg" alt="Joshua standing on a rocky shoreline" loading="lazy" style="object-position:50% 40%"><span class="fig">FIG. 01</span></div>
+        <q>The best stories aren&rsquo;t found, they&rsquo;re earned through time, trust, and showing up.</q>
+        <cite>Joshua Deosaran, 2026</cite>
       </div>
-      <p class="work-body">West Harbour Heroes took everything we did in Newfoundland's East Harbour Heroes and brought it to the West Coast. For our first shoot, it allowed me to travel to Vancouver Island to shoot with the 442 Search and Rescue team. We filmed in helicopters, parachuted from Twin Otter aircraft, and explored the new Airbus Kingfisher 295 aircraft.</p>
-        <p class="work-body">This first adrenaline-filled episode set the tone for the rest of the season and its ten episodes. I remotely produced most of the series, researching, building relationships with cast, and working closely with Story Editors and post to shape clear, engaging episodes.</p>
-        <a class="work-link" href="https://www.instagram.com/westharbourheroes/" target="_blank" rel="noopener">@westharbourheroes &rarr;</a>
     </div>
   </div>
 
-  <!-- Oyster Island -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/Carl-cafe-master.jpeg" style="object-position: 50% 61%" alt="Oyster Island Documentary" />
+  <div class="places" aria-hidden="true"><div class="ticker-track"><span>New York City<i>&#9733;</i>Fort Lauderdale<i>&#9733;</i>Toronto<i>&#9733;</i>Newfoundland<i>&#9733;</i>Vancouver Island<i>&#9733;</i>Prince Edward Island<i>&#9733;</i>Nova Scotia<i>&#9733;</i>Maine<i>&#9733;</i></span><span>New York City<i>&#9733;</i>Fort Lauderdale<i>&#9733;</i>Toronto<i>&#9733;</i>Newfoundland<i>&#9733;</i>Vancouver Island<i>&#9733;</i>Prince Edward Island<i>&#9733;</i>Nova Scotia<i>&#9733;</i>Maine<i>&#9733;</i></span></div></div>
+
+  <section class="chapters">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="tag">The story so far</span><i class="rule"></i></div>
+      <h2 class="big rv">Three cities. One <em>through line.</em></h2>
+      <div class="chap rv"><span class="no">CHAPTER I</span><h3>New York City</h3><div class="t">
+        <p>Growing up in Staten Island and Queens gave me an early education in culture, community, and paying attention. The city moves fast and expects you to keep up, whether you&rsquo;re absorbing the music, the fashion, or just watching how people carry themselves on the train. I was always watching.</p>
+        <p>That curiosity became a constant. I got obsessed with how stories get told, in music, in sport, in science. I once wrote to NASA as a kid asking about extraterrestrial life. I&rsquo;m still asking questions like that. The medium has just gotten a lot more cinematic.</p></div></div>
+      <div class="chap rv"><span class="no">CHAPTER II</span><h3>Fort Lauderdale</h3><div class="t">
+        <p>In 2004, my mom and I moved to South Florida, a big shift, but one that opened things up considerably. Life ran at a different pace down there. Warmer, more open. We were in the eye of Hurricane Katrina that summer, which sounds dramatic, but honestly, what I remember most is how people just got on with it.</p>
+        <p>My mom made sure there was still room to be a kid, weekends on Ocean Drive, long afternoons on South Beach, watching the world go by outside the Versace Mansion. That time taught me to slow down and actually look at where I am. It&rsquo;s something I carry into every shoot.</p></div></div>
+      <div class="chap rv"><span class="no">CHAPTER III</span><h3>Toronto</h3><div class="t">
+        <p>I moved to Toronto at 14 to be closer to my grandmother and great aunts, and it turned out to be the chapter that shaped everything. It&rsquo;s where I grew up for real, made lifelong friends, figured out who I was, and eventually found the work I wanted to do.</p>
+        <p>Toronto is a city built from the collision of cultures, and learning to move through that environment taught me something invaluable: how to listen before you speak, and how to connect with people who see the world very differently than you do. That skill, building trust quickly, across difference, is probably the most important thing I bring into the field.</p></div></div>
+      <div class="chap rv"><span class="no">CHAPTER IV</span><h3>What&rsquo;s next</h3><div class="t">
+        <p>Right now I&rsquo;m focused on bringing everything together, the places I&rsquo;ve lived, the people I&rsquo;ve met, the kind of stories that don&rsquo;t get told often enough. <a href="#/oyster-island" data-slug="oyster-island"><em>Oyster Island</em></a> is the most complete expression of that so far, and there&rsquo;s more coming.</p>
+        <p>I want to keep building on documentary work while taking on projects with more creative ownership. If you&rsquo;re a network, production company, or independent creator who cares about authentic, character-driven storytelling, I&rsquo;d love to hear what you&rsquo;re working on.</p></div></div>
     </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Producer</div>
-        <div class="work-show">Oyster Island, Feature Documentary</div>
-        <div class="work-dates">Apr 2025 – Jun 2026</div>
+  </section>
+
+  <section class="credits-sec" id="credits">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="tag">Work experience</span><i class="rule"></i></div>
+      <h2 class="big rv">On the ground. <em>On the air.</em></h2>
+      <div id="acc"></div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="tag">Get in touch</span><i class="rule" style="background:rgba(28,58,71,.4)"></i></div>
+      <h2 class="big rv">Let&rsquo;s tell a story worth <em>rewinding.</em></h2>
+      <div class="contact-row rv">
+        <p>Whether you have a project in mind or just want to connect, I&rsquo;d love to hear from you.</p>
+        <a class="mail" href="mailto:joshua.deosaran@gmail.com">joshua.deosaran@gmail.com</a>
+        <div class="socials"><a class="pill" href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a><a class="pill" href="https://www.instagram.com/nycjosh/" target="_blank" rel="noopener">Instagram</a><a class="pill" href="https://www.facebook.com/joshua.deosaran" target="_blank" rel="noopener">Facebook</a></div>
       </div>
-      <p class="work-body">My first Feature Documentary Producer credit, this feature took me to Prince Edward Island, Canada, where life revolves around agriculture and oysters. Balancing this with West Harbour Heroes pushed me to shift between fast-paced storytelling and a more patient, observational style of filmmaking.</p>
-        <p class="work-body">As filming unfolded, the story turned to a disease devastating the oyster population, affecting livelihoods and families. What began as a local issue grew into something much bigger, a story of community, resilience, and loss. Filmed over a year and a half, it is set to premiere at festivals in 2026.</p>
     </div>
-  </div>
+  </section>
+</main>
 
-  <!-- EHH S3 -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/EHH3-corm-selfie.png" style="object-position: 40% 50%" alt="East Harbour Heroes Season 3" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Story Producer</div>
-        <div class="work-show">East Harbour Heroes, Season 3</div>
-        <div class="work-dates">Jul 2024 – Nov 2025</div>
-      </div>
-      <p class="work-body">Season three took me across Newfoundland and Labrador, where I worked closely with cast while traversing both Field Director and Producer roles. The series followed people in Maritime industries, from Fishing to Scientific Research and Marine Stewardship, revealing the communities behind the work.</p>
-        <p class="work-body">Highlights included filming advanced fishing tech at the Marine Institute, documenting a newly discovered Coral Garden aboard a former Coast Guard icebreaker, and capturing a dive team recovering a World War II relic from deep within Gander Lake.</p>
-        <a class="work-link" href="https://tv.apple.com/ca/show/east-harbour-heroes/umc.cmc.alrl9su22yf8c20on5soy1ua" target="_blank" rel="noopener">Watch on Apple TV+ &rarr;</a>
-    </div>
-  </div>
-
-  <!-- Development Producer -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/Me and Niall Kingfisher.jpeg" style="object-position: 50% 59%" alt="Development Producer" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Development Producer</div>
-        <div class="work-show">Attraction Images</div>
-        <div class="work-dates">Jun 2024 – Jul 2024</div>
-      </div>
-      <p class="work-body">As a Development Producer, I worked on building original ideas from the ground up, shaping concepts into pitches ready for network presentations. I developed game show formats, fashion-driven series and more, handling casting, writing, and editing pitch material along the way.</p>
-        <p class="work-body">It gave me a strong sense of what makes an idea not just creative, but sellable.</p>
-    </div>
-  </div>
-
-  <!-- Claw Hunters -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/lex-lobster-boat.jpeg" style="object-position: 50% 11%" alt="Claw Hunters" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Story Producer</div>
-        <div class="work-show">Claw Hunters, Season 1</div>
-        <div class="work-dates">Sept 2023 – Jun 2024</div>
-      </div>
-      <p class="work-body">Claw Hunters was my first real jump into Story Producing. As the sole Producer, I took on the series from the ground up and learned fast. We followed lobster harvesters between Nova Scotia and Maine, between the Bay of Fundy and the Gulf of Maine. I spent days at sea, producing and directing in tough, unpredictable conditions.</p>
-        <p class="work-body">It was a true trial by fire, but it shaped how I tell stories. The series aired on The Weather Channel in 2025 and set the tone for everything that came after.</p>
-        <a class="work-link" href="https://tv.apple.com/ru/show/claw-hunters/umc.cmc.3vkcglcf0ujv1v0z78gjpz7nq?l=en" target="_blank" rel="noopener">Watch on Apple TV+ &rarr;</a>
-    </div>
-  </div>
-
-  <!-- Development Researcher -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/me-spike.jpeg" style="object-position: 50% 11%" alt="Development Researcher" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Development Researcher</div>
-        <div class="work-show">Attraction Images</div>
-        <div class="work-dates">May 2023 – Aug 2023</div>
-      </div>
-      <p class="work-body">As a Development Researcher, I focused on building ideas that matched what audiences and broadcasters were actually looking for. I developed pitches rooted in current events, finding angles that felt fresh but still viable.</p>
-        <p class="work-body">It also gave me a clear understanding of the financial side of commissioning in Canada and the United States, and what it takes to get a project off the ground. This taught me how to balance creativity with strategy from inception.</p>
-    </div>
-  </div>
-
-  <!-- EHH S1 -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/Me-Blake-Master.jpeg" style="object-position: 50% 50%" alt="East Harbour Heroes Season 1" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Researcher</div>
-        <div class="work-show">East Harbour Heroes, Season 1</div>
-        <div class="work-dates">Jul 2022 – April 2023</div>
-      </div>
-      <p class="work-body">Season One was set entirely in St John's Harbour, Newfoundland &amp; Labrador, this is where I worked closely with the Series Producer to find stories within a very limited world. With restricted access and major players opting out, we had to get creative and dig deeper.</p>
-        <p class="work-body">We found strong, character-driven stories with local fishermen, the Coast Guard, and a dive crew that quickly became standout cast. It taught me how to find great stories within constraints and adapt quickly, skills that carried through as the series grew into three seasons.</p>
-        <a class="work-link" href="https://www.primevideo.com/detail/East-Harbour-Heroes/0II5RS6NN11CZ9XYZ37WQ2ZA4R" target="_blank" rel="noopener">Watch on Prime Video &rarr;</a>
-    </div>
-  </div>
-
-  <!-- HDTFT -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/oysters-master.jpeg" style="object-position: 50% 26%" alt="How Did They Fix That" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Researcher</div>
-        <div class="work-show">How Did They Fix That?, Season 2</div>
-        <div class="work-dates">May 2022 – Jun 2022</div>
-      </div>
-      <p class="work-body">Initially titled "Impossible Repairs," this project marked my real return to the industry, jumping straight into fast-paced, global storytelling. I researched stories around the world, from the Atacama Desert in Chile to an underwater lab in Florida inspired by Jacques Cousteau, quickly getting back into the rhythm of finding strong, compelling stories.</p>
-        <a class="work-link" href="https://tv.apple.com/au/show/impossible-repairs/umc.cmc.3dml15jwu2221d3lnzct03dcf" target="_blank" rel="noopener">Watch on Apple TV+ &rarr;</a>
-    </div>
-  </div>
-
-  <!-- Daily Planet -->
-  <div class="work-entry fade-in">
-    <div class="work-entry-image-col">
-      <img class="work-entry-img" src="resources/images/field_resources/DP terminator.JPG" style="object-position: 50% 15%" alt="Daily Planet" />
-    </div>
-    <div class="work-entry-content-col">
-      <div class="work-entry-meta-block">
-        <div class="work-role">Chase Producer</div>
-        <div class="work-show">Daily Planet</div>
-        <div class="work-dates">Oct 2016 – May 2018</div>
-      </div>
-      <p class="work-body">Daily Planet was my entry into the industry in 2016. I started as an intern, moved into research, and eventually became a Chase Producer. Early on, I spent hours transcribing interviews for Story Producers, spending time with their stories and characters gave me a clear goal: I wanted to be the one at the forefront, both producing and shaping these stories.</p>
-        <p class="work-body">As I grew with the team, I learned every part of the process in a fast-paced, live-to-air environment where stories had to turn around quickly and stay topical. I was proudly part of the team when we earned the show its first Canadian Screen Award for Best News or Information Series since its inception in 1996.</p>
-        <a class="work-link" href="https://www.imdb.com/title/tt1405800/" target="_blank" rel="noopener">View on IMDb &rarr;</a>
-    </div>
-  </div>
-
-  </div><!-- /work-entries-wrap -->
-</section>
-
-<!-- OTHER EXPERIENCE -->
-<section class="other-section">
-  <p class="section-label fade-in">Other experience</p>
-  <h2 class="fade-in">Beyond the <em>lens.</em></h2>
-
-  <div class="other-entry fade-in">
-    <div>
-      <div class="other-company">Apple Inc.</div>
-      <div class="other-role">Mac Technician</div>
-      <div class="other-dates">Aug 2018 – May 2022</div>
-    </div>
-    <div class="other-body">
-      At Apple, I started in sales but was always drawn to the technical side. I worked my way to the Genius Bar and eventually into a Mac Technician role. I spent my days diagnosing issues, fixing devices, and helping people through moments that were often stressful and unexpected.
-      <br><br>
-      It also reinforced something that carries into my work today, a genuine enjoyment of solving problems and helping people navigate challenges.
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-strip">
-  <p class="section-label fade-in" style="justify-content:center;">Get in touch</p>
-  <h2 class="fade-in">Let's tell a story worth <em>remembering.</em></h2>
-  <p class="contact-sub fade-in">Whether you have a project in mind or just want to connect, I'd love to hear from you.</p>
-  <div class="contact-links fade-in">
-    <a class="btn-glow" href="mailto:joshua.deosaran@gmail.com">Send an email &rarr;</a>
-    <a class="btn-glow" href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn-glow" href="https://www.instagram.com/nycjosh/" target="_blank" rel="noopener">Instagram</a>
-    <a class="btn-glow" href="https://www.facebook.com/joshua.deosaran" target="_blank" rel="noopener">Facebook</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 Joshua Deosaran, Toronto, Canada</span>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Work</a>
-    <a href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a>
+<footer class="foot">
+  <div class="wrap">
+    <span>&copy; 2026 Joshua Deosaran, Toronto, Canada</span>
+    <nav aria-label="Footer"><a href="index.html">Shelf</a><a href="gallery.html">Library</a><a href="about.html">About</a><a href="https://www.linkedin.com/in/jdeo/" target="_blank" rel="noopener">LinkedIn</a></nav>
+    <span>Be kind, rewind.</span>
   </div>
 </footer>
 
-<script>
-  // Nav scroll
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY > 60;
-    nav.classList.toggle('scrolled', scrolled);
-    document.body.classList.toggle('nav-scrolled', scrolled);
-  }, {passive: true});
-
-  // Mobile nav toggle with overlay
-  const toggle   = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  const overlay  = document.getElementById('navOverlay');
-
-  function openNav() {
-    toggle.classList.add('open');
-    navLinks.classList.add('open');
-    if(overlay) overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeNav() {
-    toggle.classList.remove('open');
-    navLinks.classList.remove('open');
-    if(overlay) overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  toggle.addEventListener('click', () => {
-    navLinks.classList.contains('open') ? closeNav() : openNav();
-  });
-  if(overlay) overlay.addEventListener('click', closeNav);
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
-  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeNav(); });
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 70);
-      }
-    });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-
+<script src="data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
